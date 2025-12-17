@@ -3,402 +3,420 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orlantech Innovations - Where tech meets creativity and passion</title>
+    <meta name="description" content="Orlantech Innovations - Professional Web Development, Cyber Services, and Smart Digital Solutions based in Kenya.">
+    <title>Orlantech Innovations | Modern Digital Solutions</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Premium Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Custom styles for a unique touch */
+        :root {
+            --primary: #3b82f6;
+            --primary-dark: #1d4ed8;
+            --bg-dark: #0f172a;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
         .tech-gradient-bg {
-            background-color: #0d1117; /* Dark background */
-            background-image: radial-gradient(at 0% 0%, rgba(20, 30, 60, 0.2) 0%, transparent 50%),
-                              radial-gradient(at 100% 100%, rgba(40, 80, 150, 0.15) 0%, transparent 50%);
+            background-color: var(--bg-dark);
+            background-image: radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+                              radial-gradient(at 100% 100%, rgba(29, 78, 216, 0.1) 0%, transparent 50%);
         }
-        .text-blue-accent {
-            color: #3b82f6; /* Tailwind blue-500 */
+
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
         }
+
         .section-separator {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 2px;
-            background: linear-gradient(to right, #3b82f6, #1d4ed8);
-            margin: 0 auto 2.5rem;
+            width: 60px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 2px;
+            margin: 0 auto 2rem;
         }
-        /* New/Modified styles for uniform project images */
+
         .project-image-container {
-            height: 200px; /* Fixed height for uniformity */
-            overflow: hidden; /* Ensures image doesn't overflow the container */
+            height: 220px;
+            overflow: hidden;
+            background-color: #f1f5f9;
         }
+
         .project-image-container img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Ensures uniform size by covering the area, cropping if necessary */
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .project-card:hover .project-image-container img {
+            transform: scale(1.05);
+        }
+
+        .service-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .btn-shadow {
+            box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.3);
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
     </style>
-    <script>
-        // Simple script for mobile menu toggle
-        function toggleMenu() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        }
-    </script>
 </head>
-<body class="bg-gray-50 text-gray-800 antialiased overflow-x-hidden">
+<body class="bg-gray-50 text-slate-900 antialiased overflow-x-hidden">
 
-    <header class="sticky top-0 z-50 bg-white shadow-lg backdrop-filter backdrop-blur-sm bg-opacity-95 transition-all duration-300 ease-in-out">
+    <header class="sticky top-0 z-50 glass-nav border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <a href="#" class="flex items-center space-x-2">
-                    <svg class="w-6 h-6 text-blue-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1v-3.25M17 17h2a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2h2m0 0h2.25M7 17h7.5M9 17h7.5"></path></svg>
-                    <span class="text-xl font-extrabold text-gray-900 tracking-tight">Orlantech <span class="text-blue-accent">Innovations</span></span>
+            <div class="flex justify-between items-center h-20">
+                <a href="#" class="flex items-center space-x-2 group">
+                    <div class="bg-blue-600 p-1.5 rounded-lg group-hover:bg-blue-700 transition-colors">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1v-3.25M17 17h2a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2h2m0 0h2.25M7 17h7.5M9 17h7.5"></path></svg>
+                    </div>
+                    <span class="text-xl font-extrabold text-slate-900 tracking-tight">Orlantech <span class="text-blue-600">Innovations</span></span>
                 </a>
 
-                <nav class="hidden md:block space-x-8">
-                    <a href="#home" class="text-gray-600 hover:text-blue-accent transition-colors duration-200 font-medium">Home</a>
-                    <a href="#services" class="text-gray-600 hover:text-blue-accent transition-colors duration-200 font-medium">Services</a>
-                    <a href="#projects" class="text-gray-600 hover:text-blue-accent transition-colors duration-200 font-medium">Projects</a>
-                    <a href="#about" class="text-gray-600 hover:text-blue-accent transition-colors duration-200 font-medium">About</a>
-                    <a href="#contact" class="text-gray-600 hover:text-blue-accent transition-colors duration-200 font-medium">Contact</a>
+                <nav class="hidden md:flex space-x-10">
+                    <a href="#home" class="text-slate-600 hover:text-blue-600 transition-colors font-semibold text-sm tracking-wide">Home</a>
+                    <a href="#services" class="text-slate-600 hover:text-blue-600 transition-colors font-semibold text-sm tracking-wide">Services</a>
+                    <a href="#projects" class="text-slate-600 hover:text-blue-600 transition-colors font-semibold text-sm tracking-wide">Projects</a>
+                    <a href="#about" class="text-slate-600 hover:text-blue-600 transition-colors font-semibold text-sm tracking-wide">About</a>
+                    <a href="#contact" class="text-slate-600 hover:text-blue-600 transition-colors font-semibold text-sm tracking-wide">Contact</a>
                 </nav>
 
-                <button type="button" class="md:hidden text-gray-500 hover:text-blue-accent focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-accent rounded-md p-2" aria-expanded="false" onclick="toggleMenu()">
-                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                    </svg>
-                </button>
+                <div class="md:hidden">
+                    <button type="button" class="text-slate-600 p-2" onclick="toggleMenu()" aria-label="Toggle Menu">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
             </div>
         </div>
 
-        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-xl">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-accent transition-colors duration-200" onclick="toggleMenu()">Home</a>
-                <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-accent transition-colors duration-200" onclick="toggleMenu()">Services</a>
-                <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-accent transition-colors duration-200" onclick="toggleMenu()">Projects</a>
-                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-accent transition-colors duration-200" onclick="toggleMenu()">About</a>
-                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-accent transition-colors duration-200" onclick="toggleMenu()">Contact</a>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#home" class="block px-3 py-3 rounded-xl text-base font-bold text-slate-700 hover:bg-blue-50 hover:text-blue-600" onclick="toggleMenu()">Home</a>
+                <a href="#services" class="block px-3 py-3 rounded-xl text-base font-bold text-slate-700 hover:bg-blue-50 hover:text-blue-600" onclick="toggleMenu()">Services</a>
+                <a href="#projects" class="block px-3 py-3 rounded-xl text-base font-bold text-slate-700 hover:bg-blue-50 hover:text-blue-600" onclick="toggleMenu()">Projects</a>
+                <a href="#about" class="block px-3 py-3 rounded-xl text-base font-bold text-slate-700 hover:bg-blue-50 hover:text-blue-600" onclick="toggleMenu()">About</a>
+                <a href="#contact" class="block px-3 py-3 rounded-xl text-base font-bold text-slate-700 hover:bg-blue-50 hover:text-blue-600" onclick="toggleMenu()">Contact</a>
             </div>
         </div>
     </header>
+
     <main>
-        <section id="home" class="tech-gradient-bg text-white py-20 md:py-32 lg:py-40 border-b-4 border-blue-accent">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-                <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold tracking-tight mb-4 leading-tight">
-                    <span class="block animate-pulse text-blue-300">Innovating Digital Solutions</span>
+        <section id="home" class="tech-gradient-bg text-white py-24 md:py-40">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-5xl sm:text-6xl lg:text-8xl font-extrabold tracking-tight mb-8 leading-[1.1]">
+                    <span class="inline-block bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">Innovating Digital</span><br>
+                    Solutions
                 </h1>
-                <p class="mt-3 max-w-2xl mx-auto text-xl text-gray-300 sm:mt-5 sm:text-2xl">
-                    We engineer impactful digital presences and streamline essential professional services, empowering your growth in the modern tech landscape.
+                <p class="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-slate-400 font-medium">
+                    We engineer impactful digital presences and streamline professional services, empowering your growth in the modern tech landscape.
                 </p>
-                <div class="mt-10">
-                    <a href="#services" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-xl text-white bg-blue-accent hover:bg-blue-700 transform hover:scale-105 transition duration-300 ease-in-out">
+                <div class="mt-12">
+                    <a href="#services" class="inline-flex items-center justify-center px-8 py-4 text-base font-bold rounded-full text-white bg-blue-600 hover:bg-blue-700 btn-shadow transform hover:scale-105 transition-all">
                         Get Started
-                        <svg class="ml-3 h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        <svg class="ml-2 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                     </a>
                 </div>
             </div>
         </section>
-        <section id="services" class="py-16 md:py-24 bg-white">
+
+        <section id="services" class="py-24 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-center text-gray-900 mb-4">Our Core Services</h2>
-                <div class="section-separator"></div>
-                <p class="text-center text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
-                    A tailored suite of services designed to meet both your immediate technical needs and long-term digital strategy.
-                </p>
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-5xl font-extrabold text-slate-900 mb-4">Our Core Services</h2>
+                    <div class="section-separator"></div>
+                    <p class="text-lg text-slate-600 max-w-2xl mx-auto">A tailored suite of services designed to meet both your immediate technical needs and long-term digital strategy.</p>
+                </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="bg-white rounded-xl shadow-2xl p-8 transform hover:scale-[1.02] hover:shadow-blue-500/50 transition duration-300 ease-in-out border-t-4 border-blue-accent group">
-                        <div class="p-3 inline-flex items-center justify-center rounded-full bg-blue-100 text-blue-accent mb-6">
-                            <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+                    <div class="service-card bg-slate-50 rounded-3xl p-10 border border-slate-100 group">
+                        <div class="w-14 h-14 flex items-center justify-center rounded-2xl bg-blue-600 text-white mb-8 group-hover:rotate-6 transition-transform">
+                            <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
                         </div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-accent transition-colors">Online Cyber Services</h3>
-                        <p class="text-gray-600 mb-6">
-                            Professional preparation for online success: Expert CV creation, online application submissions, typing and document editing and much more.
-                        </p>
-                        <a href="#" class="inline-flex items-center text-blue-accent font-semibold hover:text-blue-700 transition-all duration-200">
-                            Explore 
-                            <svg class="ml-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                        </a>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-4">Online Cyber Services</h3>
+                        <p class="text-slate-600 mb-8 leading-relaxed">Expert CV creation, application submissions, and professional document editing to accelerate your career success.</p>
+                        <a href="#" class="inline-flex items-center text-blue-600 font-bold hover:gap-2 transition-all">Explore <svg class="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
                     </div>
 
-                    <div class="bg-white rounded-xl shadow-2xl p-8 transform hover:scale-[1.02] hover:shadow-blue-500/50 transition duration-300 ease-in-out border-t-4 border-blue-accent group">
-                        <div class="p-3 inline-flex items-center justify-center rounded-full bg-blue-100 text-blue-accent mb-6">
-                            <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                    <div class="service-card bg-slate-50 rounded-3xl p-10 border border-slate-100 group">
+                        <div class="w-14 h-14 flex items-center justify-center rounded-2xl bg-blue-600 text-white mb-8 group-hover:rotate-6 transition-transform">
+                            <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
                         </div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-accent transition-colors">Website Design</h3>
-                        <p class="text-gray-600 mb-6">
-                            From concept to launch: Building fast, responsive, and visually stunning websites that convert visitors into customers.
-                        </p>
-                        <a href="#" class="inline-flex items-center text-blue-accent font-semibold hover:text-blue-700 transition-all duration-200">
-                            View Portfolio
-                            <svg class="ml-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                        </a>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-4">Website Design</h3>
+                        <p class="text-slate-600 mb-8 leading-relaxed">Building fast, responsive, and visually stunning web experiences that convert visitors into loyal customers.</p>
+                        <a href="#" class="inline-flex items-center text-blue-600 font-bold hover:gap-2 transition-all">View Portfolio <svg class="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
                     </div>
 
-                    <div class="bg-white rounded-xl shadow-2xl p-8 transform hover:scale-[1.02] hover:shadow-blue-500/50 transition duration-300 ease-in-out border-t-4 border-blue-accent group">
-                        <div class="p-3 inline-flex items-center justify-center rounded-full bg-blue-100 text-blue-accent mb-6">
-                            <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    <div class="service-card bg-slate-50 rounded-3xl p-10 border border-slate-100 group">
+                        <div class="w-14 h-14 flex items-center justify-center rounded-2xl bg-blue-600 text-white mb-8 group-hover:rotate-6 transition-transform">
+                            <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                         </div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-accent transition-colors">Tech Projects & Solutions</h3>
-                        <p class="text-gray-600 mb-6">
-                            design and develop smart digital tools — from management systems to custom platforms — that solve real-world problems and help businesses and individuals work smarter.
-                        </p>
-                        <a href="#" class="inline-flex items-center text-blue-accent font-semibold hover:text-blue-700 transition-all duration-200">
-                            Start a Project
-                            <svg class="ml-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                        </a>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-4">Tech Solutions</h3>
+                        <p class="text-slate-600 mb-8 leading-relaxed">Developing smart digital tools and management systems tailored to solve unique business challenges.</p>
+                        <a href="#" class="inline-flex items-center text-blue-600 font-bold hover:gap-2 transition-all">Start a Project <svg class="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="projects" class="py-16 md:py-24 bg-gray-100">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-center text-gray-900 mb-4">Featured Projects</h2>
-                <div class="section-separator"></div>
-                <p class="text-center text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
-                    A glimpse into the diverse and impactful work we've delivered for our partners.
-                </p>
 
+        <section id="projects" class="py-24 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-5xl font-extrabold text-slate-900 mb-4">Featured Projects</h2>
+                    <div class="section-separator"></div>
+                </div>
 
                 <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-                    <div class="bg-white rounded-xl shadow-xl overflow-hidden group hover:shadow-2xl transition duration-300">
-                        <div class="project-image-container border-b-4 border-blue-accent/[0.5]">
-                            <img src="Screenshot 2025-05-04 230407.png" alt="EchSpace Web Screenshot">
+                    <article class="project-card bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
+                        <div class="project-image-container">
+                            <img src="Screenshot 2025-05-04 230407.png" alt="EchoSpace Web">
                         </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-gray-900 mb-2">EchoSpace Web</h3>
-                            <p class="text-gray-600 text-sm mb-4">
-                                A digital community platform for sharing thoughts, reflections, and meaningful conversations in a safe, distraction-free space.
-                            </p>
-                            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">TailwindCSS</span>
-                            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">Javascript</span>
+                        <div class="p-8">
+                            <h3 class="text-xl font-bold text-slate-900 mb-3">EchoSpace Web</h3>
+                            <p class="text-slate-600 text-sm mb-6 leading-relaxed">A digital community platform for distraction-free conversations and meaningful reflections.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Tailwind</span>
+                                <span class="bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">JS</span>
+                            </div>
                         </div>
-                    </div>
-                    
-                    <div class="bg-white rounded-xl shadow-xl overflow-hidden group hover:shadow-2xl transition duration-300">
-                        <div class="project-image-container border-b-4 border-blue-accent/[0.5]">
-                            <img src="127.0.0.1_8000_student_dashboard_(Nest Hub Max) (2).png" alt="Pendo School System Dashboard Screenshot">
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-gray-900 mb-2">Pendo School System Web-Portal</h3>
-                            <p class="text-gray-600 text-sm mb-4">
-                                A fully-functional school management platform built with Django, designed for efficiency, clarity, and real-world usability. It features an intuitive Admin Dashboard, Student Portal, academic management, attendance tracking, fees management, reports, announcements, and role-based access.
-                            </p>
-                            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">TailwindCSS</span>
-                            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">Django</span>
-                        </div>
-                    </div>
-                  
+                    </article>
 
-
-                    <div class="bg-white rounded-xl shadow-xl overflow-hidden group hover:shadow-2xl transition duration-300">
-                        <div class="project-image-container border-b-4 border-blue-accent/[0.5]">
-                            <img src="anony123.pythonanywhere.com_(Nest Hub) (1).png" alt="Urban Palate Webapp Screenshot">
+                    <article class="project-card bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
+                        <div class="project-image-container">
+                            <img src="127.0.0.1_8000_student_dashboard_(Nest Hub Max) (2).png" alt="Pendo School System">
                         </div>
-
-
-                      
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-gray-900 mb-2">Urban Palate Webapp restaurant</h3>
-                            <p class="text-gray-600 text-sm mb-4">
-                                A modern, elegant demo restaurant website showcasing a responsive landing page, user authentication, and premium UI design.
-                            </p>
-                            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">TailwindCSS</span>
-                            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">Python,Django</span>
+                        <div class="p-8">
+                            <h3 class="text-xl font-bold text-slate-900 mb-3">Pendo School System</h3>
+                            <p class="text-slate-600 text-sm mb-6 leading-relaxed">Full-scale academic management platform with portals for students, staff, and comprehensive admin controls.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Django</span>
+                                <span class="bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Tailwind</span>
+                            </div>
                         </div>
-                    </div>
-                    
-                    <div class="bg-white rounded-xl shadow-xl overflow-hidden group hover:shadow-2xl transition duration-300">
-                        <div class="project-image-container border-b-4 border-blue-accent/[0.5]">
-                            <img src="Screenshot 2025-10-01 174522.png" alt="DailEaseServices Webpage Screenshot">
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-gray-900 mb-2">DailEaseServices Webpage</h3>
-                            <p class="text-gray-600 text-sm mb-4">
-                                A clean, modern laundry company website designed to showcase services, pricing, and bookings with a professional touch..
-                            </p>
-                            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">TailwindCSS</span>
-                            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">HTML</span>
-                        </div>
-                    </div>
+                    </article>
 
-                    <div class="bg-white rounded-xl shadow-xl overflow-hidden group hover:shadow-2xl transition duration-300">
-                        <div class="project-image-container border-b-4 border-blue-accent/[0.5]">
+                    <article class="project-card bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
+                        <div class="project-image-container">
+                            <img src="anony123.pythonanywhere.com_(Nest Hub) (1).png" alt="Urban Palate">
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-xl font-bold text-slate-900 mb-3">Urban Palate</h3>
+                            <p class="text-slate-600 text-sm mb-6 leading-relaxed">An elegant restaurant demo featuring responsive layouts and premium UI design for modern dining.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Python</span>
+                                <span class="bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Django</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
+                        <div class="project-image-container">
+                            <img src="Screenshot 2025-10-01 174522.png" alt="DailEaseServices">
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-xl font-bold text-slate-900 mb-3">DailEaseServices</h3>
+                            <p class="text-slate-600 text-sm mb-6 leading-relaxed">Modern laundry services landing page designed for professional booking and price transparency.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">HTML</span>
+                                <span class="bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">CSS</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
+                        <div class="project-image-container">
                             <img src="orland0henry.github.io_natureweb_(Nest Hub Max) (1).png" alt="Nature Web">
                         </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-gray-900 mb-2">Nature Website</h3>
-                            <p class="text-gray-600 text-sm mb-4">
-                                A simple, responsive nature-themed website built with HTML, CSS, and JavaScript. It showcases clean design, smooth layout structure, and a modern eco-inspired brand experience.
-                            </p>
-                            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">TailwindCSS</span>
-                            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">HTML</span>
+                        <div class="p-8">
+                            <h3 class="text-xl font-bold text-slate-900 mb-3">Nature Portfolio</h3>
+                            <p class="text-slate-600 text-sm mb-6 leading-relaxed">Eco-inspired brand experience showcasing clean layout design and responsive web structure.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">HTML5</span>
+                                <span class="bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">JS</span>
+                            </div>
                         </div>
-                    </div>
+                    </article>
 
-                 
-                    <div class="bg-white rounded-xl shadow-xl overflow-hidden group hover:shadow-2xl transition duration-300">
-                        <div class="project-image-container border-b-4 border-blue-accent/[0.5]">
-                            <img src="127.0.0.1_8000_dashboard_(Nest Hub).png" alt="Smart Inventory System Dashboard Screenshot">
+                    <article class="project-card bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
+                        <div class="project-image-container">
+                            <img src="127.0.0.1_8000_dashboard_(Nest Hub).png" alt="Smart Inventory">
                         </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-gray-900 mb-2">📦 Smart Inventory System</h3>
-                            <p class="text-gray-600 text-sm mb-4">
-                                A simple yet powerful Inventory & Sales Management System that helps businesses track stock, record sales, and generate reports in real-time..
-                            </p>
-                            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">Django</span>
-                            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">Bootstrap,TailwindCSS</span>
+                        <div class="p-8">
+                            <h3 class="text-xl font-bold text-slate-900 mb-3">Smart Inventory System</h3>
+                            <p class="text-slate-600 text-sm mb-6 leading-relaxed">Real-time stock tracking and sales reporting system designed for small to medium businesses.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Django</span>
+                                <span class="bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Bootstrap</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="hidden lg:block"></div> 
+                    </article>
                 </div>
             </div>
         </section>
-        <section id="about" class="py-16 md:py-24 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
-                    <div class="order-2 lg:order-1">
-                        <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">
-                            🌐The Orlantech Story📖
-                        </h2>
-                        <div class="section-separator mx-0"></div>
-                        <p class="mt-4 text-gray-600 text-lg leading-relaxed">Orlantech Innovations started as a simple idea — a young tech enthusiast helping people with basic cyber services and small digital projects. Over time, this grew into a passion for building real solutions: websites, management systems, and online platforms that solve everyday problems.From designing a Smart Inventory System for businesses, to creating EchoSpace as a community platform, to building clean websites like DailyEase Services, Orlantech has always been driven by one belief:
-👉 technology should make life easier, not harder.
 
-Today, Orlantech Innovations is more than just a name — it’s a growing vision of turning local ideas into global solutions.
+        <section id="about" class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <h2 class="text-3xl sm:text-5xl font-extrabold text-slate-900 mb-6">The Orlantech Story</h2>
+                        <div class="w-16 h-1.5 bg-blue-600 rounded-full mb-8"></div>
+                        <p class="text-lg text-slate-600 leading-relaxed mb-6">
+                            Orlantech Innovations started as a simple idea — a young tech enthusiast helping people with basic cyber services. Over time, this grew into a passion for building real solutions: websites, management systems, and online platforms that solve everyday problems.
+                        </p>
+                        <p class="text-lg text-slate-600 leading-relaxed mb-8">
+                            Technology should make life easier, not harder. Today, Orlantech is a vision of turning local ideas into impactful global solutions.
                         </p>
 
-                        <div class="mt-8">
-                            <h3 class="text-xl font-bold text-blue-accent mb-2">Our Mission & Vision</h3>
-                            <ul class="space-y-3 text-gray-600">
-                                <li class="flex items-start">
-                                    <svg class="flex-shrink-0 mt-1 h-5 w-5 text-blue-accent" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
-                                    <span class="ml-3">To provide accessible, reliable, and innovative digital solutions that empower individuals and businesses to achieve more in the modern world.</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <svg class="flex-shrink-0 mt-1 h-5 w-5 text-blue-accent" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
-                                    <span class="ml-3">To become a leading African tech brand that transforms everyday challenges into smart, digital solutions while inspiring creativity, innovation, and self-reliance.</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="mt-10 lg:mt-0 order-1 lg:order-2">
-                        <div class="relative max-w-lg mx-auto lg:max-w-none">
-                            <div class="absolute inset-0 bg-blue-accent rounded-3xl transform -rotate-2 shadow-2xl"></div>
-                            <div class="relative bg-gray-200 rounded-3xl p-6 shadow-2xl">
-                                
-                                <div class="h-64 flex items-center justify-center text-gray-600 font-bold text-xl">
-                                    <img src="Grain Texture Impressionistic Weathered Frame Dust Particles And Textures Backgrounds _ JPG Free Download - Pikbest.jpeg" class="rounded-3xl w-full h-full object-cover" alt="Abstract tech background image">
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="mt-1 flex-shrink-0 bg-blue-100 p-1.5 rounded-lg">
+                                    <svg class="h-5 w-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-bold text-slate-900">Our Mission</h4>
+                                    <p class="text-slate-600">To provide reliable, innovative digital solutions that empower individuals and businesses.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="mt-1 flex-shrink-0 bg-blue-100 p-1.5 rounded-lg">
+                                    <svg class="h-5 w-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-bold text-slate-900">Our Vision</h4>
+                                    <p class="text-slate-600">To be a leading African tech brand transforming challenges into smart digital tools.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-blue-600 rounded-3xl transform -rotate-3 scale-95 opacity-10"></div>
+                        <img src="Grain Texture Impressionistic Weathered Frame Dust Particles And Textures Backgrounds _ JPG Free Download - Pikbest.jpeg" class="relative rounded-3xl w-full shadow-2xl object-cover h-[500px]" alt="Orlantech Story Illustration">
+                    </div>
                 </div>
             </div>
         </section>
-        <section class="py-16 md:py-24 bg-gray-50">
+
+        <section id="testimonials" class="py-24 bg-slate-50">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-center text-gray-900 mb-4">Client Success Stories</h2>
-                <div class="section-separator"></div>
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-5xl font-extrabold text-slate-900 mb-4">Client Success</h2>
+                    <div class="section-separator"></div>
+                </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition duration-300 border-t-4 border-blue-accent">
-                        <p class="text-xl italic text-gray-700 mb-4">
-                            "The website redesign was transformative. Orlantech not only delivered a stunning, fast site but also drastically improved our conversion rates. True innovators."
-                        </p>
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100">
+                        <div class="text-blue-600 mb-4">
+                            <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H16.017C14.9124 8 14.017 7.10457 14.017 6V5C14.017 3.34315 15.3601 2 17.017 2H20.017C21.6739 2 23.017 3.34315 23.017 5V15C23.017 18.3137 20.3307 21 17.017 21H14.017ZM1.017 21L1.017 18C1.017 16.8954 1.91243 16 3.017 16H6.017C6.56928 16 7.017 15.5523 7.017 15V9C7.017 8.44772 6.56928 8 6.017 8H3.017C1.91243 8 1.017 7.10457 1.017 6V5C1.017 3.34315 2.36014 2 4.017 2H7.017C8.67386 2 10.017 3.34315 10.017 5V15C10.017 18.3137 7.33072 21 4.017 21H1.017Z" /></svg>
+                        </div>
+                        <p class="text-slate-600 italic mb-8 leading-relaxed">"The website redesign was transformative. Orlantech not only delivered a stunning site but improved our conversion rates."</p>
                         <div class="flex items-center">
-                            <div class="w-10 h-10 rounded-full bg-blue-200 mr-3 flex items-center justify-center text-blue-accent font-bold">A.M.</div>
+                            <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold mr-3 text-xs uppercase">AM</div>
                             <div>
-                                <p class="font-bold text-gray-900">Alex Maloba</p>
-                                <p class="text-sm text-gray-500">CEO, DailyEaseServices</p>
+                                <h5 class="font-bold text-slate-900 text-sm">Alex Maloba</h5>
+                                <p class="text-xs text-slate-500">CEO, DailyEaseServices</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition duration-300 border-t-4 border-blue-accent">
-                        <p class="text-xl italic text-gray-700 mb-4">
-                            "Their Cyber Services team made my complicated job application process seamless and professional. Incredibly efficient and detail-oriented work."
-                        </p>
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100">
+                        <div class="text-blue-600 mb-4">
+                            <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H16.017C14.9124 8 14.017 7.10457 14.017 6V5C14.017 3.34315 15.3601 2 17.017 2H20.017C21.6739 2 23.017 3.34315 23.017 5V15C23.017 18.3137 20.3307 21 17.017 21H14.017ZM1.017 21L1.017 18C1.017 16.8954 1.91243 16 3.017 16H6.017C6.56928 16 7.017 15.5523 7.017 15V9C7.017 8.44772 6.56928 8 6.017 8H3.017C1.91243 8 1.017 7.10457 1.017 6V5C1.017 3.34315 2.36014 2 4.017 2H7.017C8.67386 2 10.017 3.34315 10.017 5V15C10.017 18.3137 7.33072 21 4.017 21H1.017Z" /></svg>
+                        </div>
+                        <p class="text-slate-600 italic mb-8 leading-relaxed">"Their Cyber Services made my job application process seamless and professional. Incredibly efficient work."</p>
                         <div class="flex items-center">
-                            <div class="w-10 h-10 rounded-full bg-blue-200 mr-3 flex items-center justify-center text-blue-accent font-bold">L.K.</div>
+                            <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold mr-3 text-xs uppercase">LK</div>
                             <div>
-                                <p class="font-bold text-gray-900">Linda K. Ochieng</p>
-                                <p class="text-sm text-gray-500">Client</p>
+                                <h5 class="font-bold text-slate-900 text-sm">Linda K. Ochieng</h5>
+                                <p class="text-xs text-slate-500">Professional Client</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition duration-300 border-t-4 border-blue-accent">
-                        <p class="text-xl italic text-gray-700 mb-4">
-                            "We partnered with Orlantech for a custom tech solution and they exceeded expectations. Their technical depth and project management were flawless."
-                        </p>
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100">
+                        <div class="text-blue-600 mb-4">
+                            <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H16.017C14.9124 8 14.017 7.10457 14.017 6V5C14.017 3.34315 15.3601 2 17.017 2H20.017C21.6739 2 23.017 3.34315 23.017 5V15C23.017 18.3137 20.3307 21 17.017 21H14.017ZM1.017 21L1.017 18C1.017 16.8954 1.91243 16 3.017 16H6.017C6.56928 16 7.017 15.5523 7.017 15V9C7.017 8.44772 6.56928 8 6.017 8H3.017C1.91243 8 1.017 7.10457 1.017 6V5C1.017 3.34315 2.36014 2 4.017 2H7.017C8.67386 2 10.017 3.34315 10.017 5V15C10.017 18.3137 7.33072 21 4.017 21H1.017Z" /></svg>
+                        </div>
+                        <p class="text-slate-600 italic mb-8 leading-relaxed">"Flawless technical depth and project management. They exceeded our expectations for our custom tech project."</p>
                         <div class="flex items-center">
-                            <div class="w-10 h-10 rounded-full bg-blue-200 mr-3 flex items-center justify-center text-blue-accent font-bold">R.S.</div>
+                            <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold mr-3 text-xs uppercase">MW</div>
                             <div>
-                                <p class="font-bold text-gray-900">Mark Wafula</p>
-                                <p class="text-sm text-gray-500">Client</p>
+                                <h5 class="font-bold text-slate-900 text-sm">Mark Wafula</h5>
+                                <p class="text-xs text-slate-500">Business Partner</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="contact" class="py-16 md:py-24 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-center text-gray-900 mb-4">Connect With Innovation</h2>
-                <div class="section-separator"></div>
 
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-                    <div class="bg-gray-50 p-8 rounded-xl shadow-2xl">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Send Us a Message</h3>
-                        <form action="#" method="POST" class="space-y-4">
+        <section id="contact" class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-5xl font-extrabold text-slate-900 mb-4">Let's Build Together</h2>
+                    <div class="section-separator"></div>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-12 items-start">
+                    <div class="bg-slate-50 p-10 rounded-3xl border border-slate-100">
+                        <h3 class="text-2xl font-bold text-slate-900 mb-8">Send Us a Message</h3>
+                        <form action="#" method="POST" class="space-y-6">
                             <div>
-                                <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
-                                <input type="text" name="name" id="name" autocomplete="name" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-accent focus:border-blue-accent transition" placeholder="Your Name" required>
+                                <label class="block text-sm font-bold text-slate-700 mb-2">Full Name</label>
+                                <input type="text" class="w-full px-5 py-4 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-600 outline-none transition" placeholder="Enter your name" required>
                             </div>
                             <div>
-                                <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
-                                <input id="email" name="email" type="email" autocomplete="email" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-accent focus:border-blue-accent transition" placeholder="you@example.com" required>
+                                <label class="block text-sm font-bold text-slate-700 mb-2">Email Address</label>
+                                <input type="email" class="w-full px-5 py-4 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-600 outline-none transition" placeholder="you@example.com" required>
                             </div>
                             <div>
-                                <label for="message" class="block text-sm font-medium text-gray-700">How can we help?</label>
-                                <textarea id="message" name="message" rows="4" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-accent focus:border-blue-accent transition" placeholder="Tell us about your project or service needs..." required></textarea>
+                                <label class="block text-sm font-bold text-slate-700 mb-2">Message</label>
+                                <textarea rows="5" class="w-full px-5 py-4 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-600 outline-none transition resize-none" placeholder="Tell us about your project..." required></textarea>
                             </div>
-                            <button type="submit" class="w-full inline-flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-md text-base font-medium text-white bg-blue-accent hover:bg-blue-700 transform hover:translate-y-0.5 transition duration-300">
+                            <button type="submit" class="w-full py-4 bg-blue-600 text-white font-extrabold rounded-xl hover:bg-blue-700 transition btn-shadow">
                                 Submit Inquiry
                             </button>
                         </form>
                     </div>
 
-                    <div class="space-y-8">
-                        <div class="bg-green-50 p-6 rounded-xl shadow-lg border-l-4 border-green-500">
-                            <h3 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
-                                <svg class="w-6 h-6 mr-2 text-green-600" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12c0 3.125 1.252 6.096 3.473 8.356L2.344 24l4.246-1.114A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm5.66 16.513c-.156-.375-.572-.603-.984-.703-1.09-.272-1.928-.506-2.617-.506-.689 0-1.033.256-1.378.769-.345.513-.497.886-.842.886-.345 0-1.045-.373-2.091-1.246-1.046-.874-1.742-2.146-2.091-2.659-.345-.513 0-.791.173-.969.173-.178.388-.413.561-.639.173-.226.23-.373.345-.603.115-.23.058-.456-.038-.603-.096-.147-.852-2.046-1.177-2.822-.325-.776-.65-.776-.925-.776-.275 0-.61.115-1.033.561-.423.446-1.611 1.571-1.611 3.791s1.649 4.381 1.894 4.656c.245.275 3.178 4.856 7.691 6.331 4.513 1.475 4.513.984 5.319.984 1.149 0 2.219-.446 2.564-2.146.345-1.7-.153-2.659-.307-2.934z"/></svg>
-                                Chat with Us on WhatsApp
-                            </h3>
-                            <p class="text-gray-600 mb-4">
-                                Get instant support or start a project discussion. Click below to connect directly!
-                            </p>
-                            <a href="https://wa.me/0798157050" target="_blank" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-lg shadow-md text-white bg-green-600 hover:bg-green-700 transition duration-200">
-                                Open WhatsApp Chat
-                            </a>
+                    <div class="space-y-8 lg:pt-4">
+                        <div class="bg-green-50 p-8 rounded-3xl border border-green-100 group">
+                            <h4 class="text-xl font-bold text-green-900 mb-3 flex items-center">
+                                <svg class="w-6 h-6 mr-3 text-green-600" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12c0 3.125 1.252 6.096 3.473 8.356L2.344 24l4.246-1.114A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm5.66 16.513c-.156-.375-.572-.603-.984-.703-1.09-.272-1.928-.506-2.617-.506-.689 0-1.033.256-1.378.769-.345.513-.497.886-.842.886-.345 0-1.045-.373-2.091-1.246-1.046-.874-1.742-2.146-2.091-2.659-.345-.513 0-.791.173-.969.173-.178.388-.413.561-.639.173-.226.23-.373.345-.603.115-.23.058-.456-.038-.603-.096-.147-.852-2.046-1.177-2.822-.325-.776-.65-.776-.925-.776-.275 0-.61.115-1.033.561-.423.446-1.611 1.571-1.611 3.791s1.649 4.381 1.894 4.656c.245.275 3.178 4.856 7.691 6.331 4.513 1.475 4.513.984 5.319.984 1.149 0 2.219-.446 2.564-2.146.345-1.7-.153-2.659-.307-2.934z"/></svg>
+                                WhatsApp Chat
+                            </h4>
+                            <p class="text-green-800 text-sm mb-6 font-medium">Get instant support or start a project discussion directly.</p>
+                            <a href="https://wa.me/0798157050" target="_blank" class="inline-flex px-6 py-3 bg-green-600 text-white font-bold rounded-xl hover:bg-green-700 transition">Open Chat</a>
                         </div>
 
-                        <div class="bg-blue-50 p-6 rounded-xl shadow-lg border-l-4 border-blue-accent">
-                            <h3 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
-                                <svg class="w-6 h-6 mr-2 text-blue-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-2 4v7a2 2 0 01-2 2H5a2 2 0 01-2-2v-7"></path></svg>
+                        <div class="bg-blue-50 p-8 rounded-3xl border border-blue-100">
+                            <h4 class="text-xl font-bold text-blue-900 mb-3 flex items-center">
+                                <svg class="w-6 h-6 mr-3 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-2 4v7a2 2 0 01-2 2H5a2 2 0 01-2-2v-7"></path></svg>
                                 Direct Email
-                            </h3>
-                            <p class="text-gray-600 mb-4">
-                                For detailed inquiries or proposals, reach out to our primary mailbox.
-                            </p>
-                            <a href="mailto:info@orlantechinnovations.com" class="text-blue-accent hover:text-blue-700 font-medium transition duration-200">
-                                info@orlantechinnovations.com
-                            </a>
+                            </h4>
+                            <a href="mailto:info@orlantechinnovations.com" class="text-blue-600 font-extrabold hover:text-blue-700 transition break-all">info@orlantechinnovations.com</a>
                         </div>
 
                         <div class="pt-4">
-                            <h3 class="text-xl font-bold text-gray-900 mb-4">Follow Our Journey</h3>
+                            <h4 class="text-sm font-extrabold text-slate-400 uppercase tracking-widest mb-4">Stay Connected</h4>
                             <div class="flex space-x-6">
-                                <a href="#" class="text-gray-400 hover:text-blue-accent transition-colors duration-200" aria-label="LinkedIn">
-                                    <svg class="h-7 w-7" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.565-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                                <a href="#" class="text-slate-400 hover:text-blue-600 transition-colors">
+                                    <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.565-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                                 </a>
                             </div>
                         </div>
@@ -407,15 +425,28 @@ Today, Orlantech Innovations is more than just a name — it’s a growing visio
             </div>
         </section>
     </main>
-    <footer>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 border-t border-gray-200 text-center">
-            <p class="text-gray-500 text-sm">
-                &copy; 2025 Orlantech Innovations. All rights reserved. Built with <span class="text-red-500">❤️</span> and Tailwind CSS.
+
+    <footer class="bg-white py-12 border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-slate-400 font-bold text-sm tracking-wide">
+                &copy; 2025 Orlantech Innovations. All rights reserved.
             </p>
+            <p class="text-slate-300 text-xs mt-2 uppercase tracking-tighter">Crafted with precision & Tailwind CSS</p>
         </div>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Handle form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Your message has been received! We will get back to you shortly.');
+            this.reset();
+        });
+    </script>
 </body>
 </html>
-
-
-
