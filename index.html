@@ -441,13 +441,18 @@
     </script>
 
     
-    <script type="application/ld+json">
+   <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
+      "@type": ["Organization", "ProfessionalService"],
+      "@id": "https://orland0henry.github.io/orlanweb/#organization",
       "name": "Orlantech Innovations",
+      "alternateName": "Orlantech",
       "description": "Nairobi-based tech agency specializing in secure full-stack Django web development and business automation systems.",
-      "url": "https://orlantech.com", 
+      "url": "https://orland0henry.github.io/orlanweb/",
+      "logo": "https://orland0henry.github.io/orlanweb/orlan.jpg",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Nairobi",
@@ -458,8 +463,15 @@
         "Cybersecurity",
         "Penetration Testing",
         "Software Architecture"
+      ],
+      "sameAs": [
+        "https://github.com/ORLAND0HENRY",
+        "https://ke.linkedin.com/in/orlando-henry",
+        "https://www.tiktok.com/@thewebsentinel"
       ]
     }
-    </script>
-</body>
+  ]
+}
+</script>
+
 </html>
