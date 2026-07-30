@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://orland0henry.github.io/orlanweb/sitemap.xml
