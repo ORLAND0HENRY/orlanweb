@@ -4,17 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orlantech Innovations | WHERE TECH MEETS CREATIVITY AND PASSION</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    
+
+    <!-- Favicon & Touch Icon -->
+    <link rel="icon" type="image/jpeg" href="orlan.jpg">
+    <link rel="apple-touch-icon" href="orlan.jpg">
+
     <!-- SEO Metadata -->
-    <meta name="description" content="Orlantech Innovations is a tech startup focused on custom web development and business systems automation, founded by self-taught backend developer Orlando Henry. Based in Nairobi, Kenya, the tech venture blends software logic with user-focused creative design.">
-    <meta name="keywords" content="Orlantech,Orlantech Innovations, Orlando Henry, web development Nairobi, orlantech,orlando,Django developer Kenya, business automation software, custom CV generator,web companies, website build,websites company,tech,Kenya">
+    <meta name="description" content="Orlantech Innovations is a Nairobi-based tech venture specializing in custom secure Django web development, business automation, and high-performance agency software.">
+    <meta name="keywords" content="Orlantech, Orlantech Innovations, Orlando Henry, web development Nairobi, Django developer Kenya, business automation software, custom CV generator, web companies Kenya">
     <meta name="author" content="Orlantech Innovations">
     <meta name="robots" content="index, follow">
-    
-    <meta name="google-site-verification" content="google52c1eaef9d8dff1d" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <!-- Open Graph (WhatsApp, LinkedIn, Social Sharing) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Orlantech Innovations | Where Tech Meets Creativity">
+    <meta property="og:description" content="Nairobi-based tech agency specializing in secure full-stack Django web development and business automation systems.">
+    <meta property="og:url" content="https://orland0henry.github.io/orlanweb/">
+    <meta property="og:image" content="https://orland0henry.github.io/orlanweb/orlan.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Orlantech Innovations">
+    <meta name="twitter:description" content="Nairobi-based tech agency specializing in secure full-stack Django web development and business automation systems.">
+    <meta name="twitter:image" content="https://orland0henry.github.io/orlanweb/orlan.jpg">
+
+    <!-- Search Verification -->
+    <meta name="google-site-verification" content="google52c1eaef9d8dff1d.html" />
+
+    <!-- Fonts & Tailwind CSS CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
     <script>
         tailwind.config = {
             theme: {
@@ -22,7 +44,7 @@
                     colors: {
                         parchment: '#FDFCFB',
                         obsidian: '#121212',
-                        clay: '#C68B59',
+                        amberBrand: '#f59e0b',
                         sage: '#7D8B3A',
                     },
                     fontFamily: {
@@ -72,7 +94,7 @@
         }
         
         .link-underline {
-            background-image: linear-gradient(transparent, transparent), linear-gradient(#C68B59, #C68B59);
+            background-image: linear-gradient(transparent, transparent), linear-gradient(#f59e0b, #f59e0b);
             background-size: 0 2px, 100% 2px;
             background-position: 100% 100%, 0 100%;
             background-repeat: no-repeat;
@@ -87,12 +109,10 @@
             color: transparent;
         }
 
-        /* Prevent horizontal overflow */
         body { overflow-x: hidden; width: 100%; }
     </style>
 </head>
 <body class="bg-parchment text-obsidian font-sans grain antialiased">
-
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="fixed inset-0 z-[100] bg-obsidian text-parchment p-8 flex flex-col justify-center space-y-6 text-3xl font-serif">
         <button onclick="toggleMenu()" class="absolute top-8 right-8 text-sm font-sans font-light uppercase tracking-widest hover:text-clay transition-colors">Close</button>
