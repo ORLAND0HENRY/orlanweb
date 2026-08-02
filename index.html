@@ -1,42 +1,31 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orlantech Innovations | WHERE TECH MEETS CREATIVITY AND PASSION</title>
+    <title>Orlantech Innovations | Vanguard of Digital Architecture</title>
 
-    <!-- Favicon & Touch Icon -->
+    <!-- Asset & Brand Setup -->
     <link rel="icon" type="image/jpeg" href="orlan.jpg">
     <link rel="apple-touch-icon" href="orlan.jpg">
 
-    <!-- SEO Metadata -->
-    <meta name="description" content="Orlantech Innovations is a Nairobi-based tech venture specializing in custom secure Django web development, business automation, and high-performance agency software.">
-    <meta name="keywords" content="Orlantech, Orlantech Innovations, Orlando Henry, web development Nairobi, Django developer Kenya, business automation software, custom CV generator, web companies Kenya">
+    <!-- SEO & Metadata -->
+    <meta name="description"
+        content="Orlantech Innovations is a premier Nairobi-based venture specializing in high-performance Django web engineering, ethical hacking security, and custom digital experiences.">
+    <meta name="keywords" content="Orlantech Innovations, Web Development Nairobi, Secure Django Systems, Portfolio">
     <meta name="author" content="Orlantech Innovations">
-    <meta name="robots" content="index, follow">
-
-    <!-- Open Graph (WhatsApp, LinkedIn, Social Sharing) -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Orlantech Innovations | Where Tech Meets Creativity">
-    <meta property="og:description" content="Nairobi-based tech agency specializing in secure full-stack Django web development and business automation systems.">
-    <meta property="og:url" content="https://orland0henry.github.io/orlanweb/">
-    <meta property="og:image" content="https://orland0henry.github.io/orlanweb/orlan.jpg">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Orlantech Innovations">
-    <meta name="twitter:description" content="Nairobi-based tech agency specializing in secure full-stack Django web development and business automation systems.">
-    <meta name="twitter:image" content="https://orland0henry.github.io/orlanweb/orlan.jpg">
-
-    <!-- Search Verification -->
-    <meta name="google-site-verification" content="google52c1eaef9d8dff1d.html" />
 
     <!-- Fonts & Tailwind CSS CDN -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap"
+        rel="stylesheet">
+    <link href="https://db.onlinewebfonts.com/c/8b75d9dcff6a48c35a46656192adf019?family=FSP+DEMO+-+PODIUM+Sharp+4.11"
+        rel="stylesheet" type="text/css" />
+
     <script src="https://cdn.tailwindcss.com"></script>
-    
     <script>
         tailwind.config = {
             theme: {
@@ -45,501 +34,737 @@
                         parchment: '#FDFCFB',
                         obsidian: '#121212',
                         amberBrand: '#f59e0b',
-                        sage: '#7D8B3A',
                     },
                     fontFamily: {
-                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
                         serif: ['Playfair Display', 'serif'],
+                        podium: ['"FSP DEMO - PODIUM Sharp 4.11"', 'sans-serif'],
                     }
                 }
             }
         }
     </script>
+
     <style>
+        .font-podium {
+            font-family: 'FSP DEMO - PODIUM Sharp 4.11', 'Inter', sans-serif;
+        }
+
+        .font-playfair {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Animation utilities */
+        @keyframes fade-up {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes heroReveal {
+            0% {
+                opacity: 0;
+                transform: translateY(28px);
+                filter: blur(12px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+                filter: blur(0);
+            }
+        }
+
+        @keyframes heroZoom {
+            0% {
+                transform: scale(1.12);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .animate-fade-up {
+            animation: fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .animate-fade-up-delay-1 {
+            animation: fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+            opacity: 0;
+        }
+
+        .animate-fade-up-delay-2 {
+            animation: fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
+            opacity: 0;
+        }
+
+        .animate-fade-up-delay-3 {
+            animation: fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.6s forwards;
+            opacity: 0;
+        }
+
+        .animate-fade-up-delay-4 {
+            animation: fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.8s forwards;
+            opacity: 0;
+        }
+
+        .hero-zoom {
+            animation: heroZoom 1.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        /* Grain & Spotlight Reveal Layer Styling */
         .grain::before {
             content: "";
             position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background-image: url("https://grainy-gradients.vercel.app/noise.svg");
             opacity: 0.04;
             pointer-events: none;
             z-index: 9999;
         }
 
-        .reveal { 
-            opacity: 0; 
-            transform: translateY(30px); 
-            transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1); 
+        .reveal-element {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
         }
-        .reveal.active { 
-            opacity: 1; 
-            transform: translateY(0); 
+
+        .reveal-element.active {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         #mobile-menu {
-            transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
-            transform: translateX(100%);
-        }
-        #mobile-menu.open { 
-            transform: translateX(0); 
+            transition: opacity 0.4s ease, visibility 0.4s ease;
         }
 
-        .project-card { 
-            transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1); 
+        .project-card {
+            transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
         }
+
         @media (min-width: 768px) {
-            .project-card:hover { 
-                transform: translateY(-8px); 
+            .project-card:hover {
+                transform: translateY(-8px);
             }
         }
-        
-        .link-underline {
-            background-image: linear-gradient(transparent, transparent), linear-gradient(#f59e0b, #f59e0b);
-            background-size: 0 2px, 100% 2px;
-            background-position: 100% 100%, 0 100%;
-            background-repeat: no-repeat;
-            transition: background-size 0.4s linear;
-        }
-        .link-underline:hover { 
-            background-size: 100% 2px, 100% 2px; 
-        }
-
-        .text-outline {
-            -webkit-text-stroke: 1px rgba(18, 18, 18, 0.1);
-            color: transparent;
-        }
-
-        body { overflow-x: hidden; width: 100%; }
     </style>
 </head>
-<body class="bg-parchment text-obsidian font-sans grain antialiased">
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="fixed inset-0 z-[100] bg-obsidian text-parchment p-8 flex flex-col justify-center space-y-6 text-3xl font-serif">
-        <button onclick="toggleMenu()" class="absolute top-8 right-8 text-sm font-sans font-light uppercase tracking-widest hover:text-clay transition-colors">Close</button>
-        <a href="#work" onclick="toggleMenu()" class="hover:italic transition-all duration-300">The Index</a>
-        <a href="#story" onclick="toggleMenu()" class="hover:italic transition-all duration-300">Our Story</a>
-        <a href="#contact" onclick="toggleMenu()" class="hover:italic transition-all duration-300">Contact</a>
-        <div class="pt-10">
-            <a href="mailto:hello@orlantech.com" class="text-sm font-sans font-semibold text-clay uppercase tracking-widest">hello@orlantech.com</a>
-        </div>
-    </div>
 
-    <!-- Navigation -->
-    <nav class="fixed w-full z-50 px-6 py-4 md:px-12 md:py-6 flex justify-between items-center mix-blend-difference text-white transition-all duration-300">
-        <a href="#" class="text-lg md:text-xl font-extrabold tracking-tighter uppercase">ORLAN<span class="text-clay">TECH</span></a>
-        
-        <div class="hidden md:flex items-center space-x-10 text-[10px] font-bold uppercase tracking-widest">
-            <a href="#work" class="link-underline">The Index</a>
-            <a href="#story" class="link-underline">Our Story</a>
-            <a href="#contact" class="link-underline">Contact</a>
-            <a href="#contact" class="px-5 py-2 bg-white text-obsidian rounded-full hover:bg-clay hover:text-white transition duration-300 transform active:scale-95">Start Project</a>
+<body class="bg-obsidian text-parchment font-sans grain antialiased overflow-x-hidden">
+
+    <!-- Fixed Header Navigation Bar -->
+    <nav
+        class="fixed top-0 left-0 right-0 z-[100] flex items-center justify-between px-6 sm:px-10 lg:px-16 py-5 lg:py-7 backdrop-blur-md bg-black/20 border-b border-white/10 transition-all duration-300">
+        <!-- Brand Wordmark -->
+        <a href="#" class="flex items-center gap-3 group">
+            <svg class="w-6 h-6 fill-amber-500 group-hover:rotate-12 transition-transform duration-300"
+                viewBox="0 0 256 256">
+                <path d="M 256 256 L 128 256 L 0 128 L 128 128 Z M 256 128 L 128 128 L 0 0 L 128 0 Z" />
+            </svg>
+            <span class="text-white text-xl sm:text-2xl font-podium uppercase tracking-wider">ORLANTECH <span
+                    class="text-amber-500">INNOVATIONS</span></span>
+        </a>
+
+        <!-- Desktop Navigation Pill -->
+        <div
+            class="hidden md:flex absolute left-1/2 -translate-x-1/2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-3 py-1.5 items-center gap-1">
+            <a href="#hero-video"
+                class="text-white px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest hover:bg-white/20 transition-colors">Vanguard</a>
+            <a href="#spotlight-interactive"
+                class="text-white/80 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest hover:bg-white/20 hover:text-white transition-colors">Core
+                Systems</a>
+            <a href="#work"
+                class="text-white/80 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest hover:bg-white/20 hover:text-white transition-colors">Archive</a>
+            <a href="#story"
+                class="text-white/80 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest hover:bg-white/20 hover:text-white transition-colors">Our
+                Story</a>
         </div>
 
-        <button onclick="toggleMenu()" class="md:hidden flex flex-col space-y-1.5 focus:outline-none p-2" aria-label="Toggle Menu">
+        <!-- Right Side Desktop CTA -->
+        <div class="hidden md:block">
+            <a href="#contact"
+                class="inline-flex items-center gap-2 border border-amber-500/50 hover:border-amber-500 text-amber-500 hover:bg-amber-500 hover:text-black px-6 py-2.5 rounded-full text-xs tracking-widest uppercase transition-all duration-300 font-semibold">
+                Get In Touch
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+            </a>
+        </div>
+
+        <!-- Mobile Hamburger -->
+        <button onclick="toggleMobileMenu(true)" class="md:hidden flex flex-col space-y-1.5 p-2 focus:outline-none"
+            aria-label="Open Menu">
             <span class="w-6 h-0.5 bg-white"></span>
             <span class="w-6 h-0.5 bg-white"></span>
+            <span class="w-4 h-0.5 bg-amber-500"></span>
         </button>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="relative min-h-screen flex flex-col justify-center pt-24 overflow-hidden px-6 md:px-12">
-        <div class="absolute inset-0 flex items-center justify-center pointer-events-none select-none">
-            <span class="text-[30vw] md:text-[20vw] font-serif italic text-outline leading-none transform -rotate-12 opacity-30 md:opacity-50">Studio</span>
+    <!-- Fullscreen Mobile Menu Overlay -->
+    <div id="mobile-menu"
+        class="fixed inset-0 z-[150] bg-black/95 backdrop-blur-md opacity-0 invisible flex flex-col justify-between p-8 sm:p-12">
+        <div class="flex justify-between items-center">
+            <span class="text-white font-podium text-xl tracking-wider">ORLANTECH</span>
+            <button onclick="toggleMobileMenu(false)" class="text-white hover:text-amber-500 p-2 text-2xl"
+                aria-label="Close Menu">✕</button>
         </div>
 
-        <div class="max-w-7xl mx-auto w-full relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 items-start">
-                <div class="lg:col-span-8">
-                    <div class="reveal flex items-center gap-3 mb-6">
-                        <span class="w-6 md:w-9 h-px bg-clay"></span>
-                        <h2 class="text-[10px] md:text-xs font-bold uppercase tracking-[0.3em] md:tracking-[0.5em] text-clay">Where Tech Meets Passion</h2>
-                    </div>
-                    
-                    <h1 class="reveal text-[15vw] md:text-[10vw] lg:text-[8rem] font-serif leading-[0.9] tracking-tighter mb-8 md:mb-12">
-                        Orlantech<br>
-                        <span class="flex flex-wrap items-center gap-4">
-                            <span class="italic text-clay">Innovations</span>
-                            <span class="block text-[10px] md:text-xs font-sans font-light tracking-[0.2em] text-obsidian/40 uppercase max-w-[150px] leading-tight">Crafting soulful digital products</span>
-                        </span>
-                    </h1>
-                </div>
-
-                <div class="lg:col-span-4 lg:pt-24">
-                    <div class="reveal space-y-6 md:space-y-10">
-                        <p class="text-lg md:text-xl lg:text-2xl text-obsidian/70 leading-relaxed font-light max-w-md">
-                            Engineering digital experiences that bridge the gap between complex logic and the human heart.
-                        </p>
-                        
-                        <div class="flex flex-col gap-4 md:gap-6">
-                            <div class="flex items-center gap-3">
-                                <span class="text-[9px] md:text-xs font-bold uppercase tracking-widest px-2 py-1 bg-obsidian text-parchment rounded-sm">Nairobi</span>
-                                <span class="text-[9px] font-bold text-clay uppercase tracking-widest">Est. 2024</span>
-                            </div>
-                            <div class="flex space-x-4">
-                                <a href="#work" class="text-[10px] font-bold uppercase tracking-widest border-b border-obsidian pb-1 hover:text-clay hover:border-clay transition-all duration-300">Scroll to Explore</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="flex flex-col items-center space-y-8 my-auto">
+            <a href="#hero-video" onclick="toggleMobileMenu(false)"
+                class="font-podium text-3xl sm:text-4xl text-white uppercase tracking-wider hover:text-amber-500 transition-colors">Vanguard</a>
+            <a href="#spotlight-interactive" onclick="toggleMobileMenu(false)"
+                class="font-podium text-3xl sm:text-4xl text-white uppercase tracking-wider hover:text-amber-500 transition-colors">Core
+                Systems</a>
+            <a href="#work" onclick="toggleMobileMenu(false)"
+                class="font-podium text-3xl sm:text-4xl text-white uppercase tracking-wider hover:text-amber-500 transition-colors">Archive</a>
+            <a href="#story" onclick="toggleMobileMenu(false)"
+                class="font-podium text-3xl sm:text-4xl text-white uppercase tracking-wider hover:text-amber-500 transition-colors">Our
+                Story</a>
+            <a href="#contact" onclick="toggleMobileMenu(false)"
+                class="mt-4 border border-amber-500 text-amber-500 px-8 py-3 rounded-full text-xs tracking-widest uppercase font-semibold">Get
+                In Touch</a>
         </div>
 
-        <div class="hidden sm:block absolute bottom-12 left-6 md:left-12 reveal" style="transition-delay: 0.5s;">
-            <div class="flex items-center gap-4 transform rotate-90 origin-left">
-                <span class="text-[9px] font-bold uppercase tracking-widest opacity-30">Scroll Down</span>
-                <span class="w-8 md:w-12 h-px bg-obsidian/20"></span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Orlantech Story / About Section -->
-    <section id="story" class="py-24 px-6 md:px-12 bg-white border-y border-obsidian/5 overflow-hidden">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-                <div class="reveal">
-                    <h2 class="text-[10px] font-bold uppercase tracking-[0.4em] text-clay mb-6">The Orlantech Narrative</h2>
-                    <h3 class="text-4xl md:text-5xl font-serif leading-tight mb-8">
-                        We started with a simple belief: that technology should feel as <span class="italic text-clay">natural as breathing.</span>
-                    </h3>
-                    <div class="space-y-6 text-obsidian/70 leading-relaxed font-light">
-                        <p>
-                            Born in the vibrant tech landscape of Nairobi, Orlantech Innovations was founded to challenge the cold, sterile nature of modern software. We saw a world full of functional but soulless tools and decided to build something different.
-                        </p>
-                        <p>
-                            Our journey began in 2024, driven by a collective of engineers and designers who refuse to separate logic from aesthetics. To us, a line of code is as important as a brushstroke, and a database schema is as critical as the user interface it supports.
-                        </p>
-                    </div>
-                    
-                    <div class="mt-12 grid grid-cols-2 gap-8 pt-8 border-t border-obsidian/5">
-                        <div>
-                            <span class="block text-3xl font-serif text-clay mb-2">40+</span>
-                            <span class="text-[10px] font-bold uppercase tracking-widest text-obsidian/40">Products Shipped</span>
-                        </div>
-                        <div>
-                            <span class="block text-3xl font-serif text-clay mb-2">98%</span>
-                            <span class="text-[10px] font-bold uppercase tracking-widest text-obsidian/40">Client Retention</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="reveal relative" style="transition-delay: 0.2s;">
-                    <!-- Visual representation of the "Story" -->
-                    <div class="aspect-[4/5] bg-parchment rounded-3xl overflow-hidden shadow-2xl relative group">
-                        <div class="absolute inset-0 bg-clay/5 group-hover:bg-transparent transition-colors duration-700"></div>
-                        <!-- Placeholder for a studio image or brand visual -->
-                        <div class="w-full h-full flex items-center justify-center p-12 text-center"><img src="Grain Texture Impressionistic Weathered Frame Dust Particles And Textures Backgrounds _ JPG Free Download - Pikbest.jpeg"  class="w-full h-full object-contain">
-                            <div>
-                                <span class="block text-[6rem] font-serif italic text-clay/20 leading-none mb-4 tracking-tighter">O.</span>
-                                <p class="text-xs font-bold uppercase tracking-[0.3em] text-obsidian/30">Nairobi Headquarters</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Absolute element for texture -->
-                    <div class="absolute -bottom-8 -left-8 w-48 h-48 bg-clay rounded-full blur-[80px] opacity-10 -z-10"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Work Section -->
-<section id="work" class="py-12 sm:py-16 md:py-24 px-4 sm:px-6 md:px-12 bg-obsidian text-parchment rounded-t-[2rem] sm:rounded-t-[2.5rem] md:rounded-t-[5rem] overflow-hidden">
-    <div class="max-w-7xl mx-auto">
-        <!-- Header -->
-        <header class="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 sm:mb-16 md:mb-24 gap-4 md:gap-6">
-            <div>
-                <h2 class="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-serif mb-2 sm:mb-4 tracking-tight">Selected Archive</h2>
-                <p class="text-parchment/40 text-[9px] sm:text-[10px] md:text-xs uppercase tracking-[0.2em] font-semibold italic">Curated Works 2024 — 2026</p>
-            </div>
-            <div class="hidden md:block text-right">
-                <p class="text-amber-500 text-[10px] font-bold uppercase tracking-[0.3em] flex items-center gap-2">
-                    <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
-                    Explore Our Craft
-                </p>
-            </div>
-        </header>
-
-        <!-- 2-by-2 Grid on Small Screens (grid-cols-2) and Up -->
-        <div class="grid grid-cols-2 md:grid-cols-2 gap-x-3 sm:gap-x-6 lg:gap-x-12 gap-y-10 sm:gap-y-16 md:gap-y-24">
-            
-            <!-- Project 1: Pendo Management -->
-            <a href="https://orlando.pythonanywhere.com" target="_blank" rel="noopener noreferrer" class="block reveal project-card group cursor-pointer">
-                <div class="aspect-[4/3] bg-neutral-900 rounded-xl sm:rounded-2xl md:rounded-3xl overflow-hidden mb-3 sm:mb-6 relative shadow-lg shadow-black/40 border border-white/5">
-                    <img src="pendo.png" 
-                         class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-out transform group-hover:scale-105 group-active:scale-95" 
-                         alt="Pendo School Management" loading="lazy">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end sm:items-center justify-center p-3">
-                        <span class="border border-amber-500/50 text-amber-400 px-3 sm:px-5 py-1.5 sm:py-2 rounded-full uppercase text-[8px] sm:text-[9px] tracking-widest bg-black/40 backdrop-blur-md transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">Visit Site &rarr;</span>
-                    </div>
-                </div>
-                <div class="flex justify-between items-start">
-                    <div class="pr-2 min-w-0">
-                        <div class="flex items-center gap-2 mb-1">
-                            <h3 class="text-base sm:text-2xl md:text-3xl font-serif truncate group-hover:text-amber-400 transition-colors">Pendo Management</h3>
-                        </div>
-                        <p class="text-parchment/50 text-[11px] sm:text-sm mb-2 sm:mb-4 line-clamp-2 leading-relaxed">Modern educational ecosystem with intelligent role-based tracking.</p>
-                        <div class="flex flex-wrap gap-1 sm:gap-2 text-[8px] sm:text-[9px] uppercase tracking-widest font-semibold text-amber-500/80">
-                            <span class="border border-amber-500/20 bg-amber-500/5 px-2 sm:px-3 py-0.5 sm:py-1 rounded-full">Django</span>
-                            <span class="border border-amber-500/20 bg-amber-500/5 px-2 sm:px-3 py-0.5 sm:py-1 rounded-full">PostgreSQL</span>
-                        </div>
-                    </div>
-                    <span class="text-amber-500 font-serif italic text-sm sm:text-xl md:text-2xl shrink-0">01</span>
-                </div>
-            </a>
-
-            <!-- Project 2: Church Web App -->
-            <a href="https://kangemiambassadors.pythonanywhere.com" target="_blank" rel="noopener noreferrer" class="block reveal project-card group cursor-pointer" style="transition-delay: 0.1s;">
-                <div class="aspect-[4/3] bg-neutral-900 rounded-xl sm:rounded-2xl md:rounded-3xl overflow-hidden mb-3 sm:mb-6 relative shadow-lg shadow-black/40 border border-white/5">
-                    <img src="chrch.png" 
-                         class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-out transform group-hover:scale-105 group-active:scale-95" 
-                         alt="SDA Church Hub" loading="lazy">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end sm:items-center justify-center p-3">
-                        <span class="border border-amber-500/50 text-amber-400 px-3 sm:px-5 py-1.5 sm:py-2 rounded-full uppercase text-[8px] sm:text-[9px] tracking-widest bg-black/40 backdrop-blur-md transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">Visit Site &rarr;</span>
-                    </div>
-                </div>
-                <div class="flex justify-between items-start">
-                    <div class="pr-2 min-w-0">
-                        <h3 class="text-base sm:text-2xl md:text-3xl font-serif mb-1 truncate group-hover:text-amber-400 transition-colors">Church Web App</h3>
-                        <p class="text-parchment/50 text-[11px] sm:text-sm mb-2 sm:mb-4 line-clamp-2 leading-relaxed">Community platform with integrated real-time M-Pesa STK Push.</p>
-                        <div class="flex flex-wrap gap-1 sm:gap-2 text-[8px] sm:text-[9px] uppercase tracking-widest font-semibold text-amber-500/80">
-                            <span class="border border-amber-500/20 bg-amber-500/5 px-2 sm:px-3 py-0.5 sm:py-1 rounded-full">FinTech</span>
-                            <span class="border border-amber-500/20 bg-amber-500/5 px-2 sm:px-3 py-0.5 sm:py-1 rounded-full">Community</span>
-                        </div>
-                    </div>
-                    <span class="text-amber-500 font-serif italic text-sm sm:text-xl md:text-2xl shrink-0">02</span>
-                </div>
-            </a>
-
-            <!-- Project 3: LittleBox Foundation -->
-            <a href="https://littlebox.pythonanywhere.com" target="_blank" rel="noopener noreferrer" class="block reveal project-card group cursor-pointer">
-                <div class="aspect-[4/3] bg-neutral-900 rounded-xl sm:rounded-2xl md:rounded-3xl overflow-hidden mb-3 sm:mb-6 relative shadow-lg shadow-black/40 border border-white/5">
-                    <img src="littlebox.png" 
-                         class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-out transform group-hover:scale-105 group-active:scale-95" 
-                         alt="Little Box Foundation" loading="lazy">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end sm:items-center justify-center p-3">
-                        <span class="border border-amber-500/50 text-amber-400 px-3 sm:px-5 py-1.5 sm:py-2 rounded-full uppercase text-[8px] sm:text-[9px] tracking-widest bg-black/40 backdrop-blur-md transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">Visit Site &rarr;</span>
-                    </div>
-                </div>
-                <div class="flex justify-between items-start">
-                    <div class="pr-2 min-w-0">
-                        <h3 class="text-base sm:text-2xl md:text-3xl font-serif mb-1 truncate group-hover:text-amber-400 transition-colors">LittleBox Foundation</h3>
-                        <p class="text-parchment/50 text-[11px] sm:text-sm mb-2 sm:mb-4 line-clamp-2 leading-relaxed">Social impact and outreach engagement platform.</p>
-                        <div class="flex flex-wrap gap-1 sm:gap-2 text-[8px] sm:text-[9px] uppercase tracking-widest font-semibold text-amber-500/80">
-                            <span class="border border-amber-500/20 bg-amber-500/5 px-2 sm:px-3 py-0.5 sm:py-1 rounded-full">Non-Profit</span>
-                            <span class="border border-amber-500/20 bg-amber-500/5 px-2 sm:px-3 py-0.5 sm:py-1 rounded-full">Frontend</span>
-                        </div>
-                    </div>
-                    <span class="text-amber-500 font-serif italic text-sm sm:text-xl md:text-2xl shrink-0">03</span>
-                </div>
-            </a>
-
-            <!-- Project 4: Urban Palate -->
-            <a href="https://websentinel.pythonanywhere.com" target="_blank" rel="noopener noreferrer" class="block reveal project-card group cursor-pointer" style="transition-delay: 0.1s;">
-                <div class="aspect-[4/3] bg-neutral-900 rounded-xl sm:rounded-2xl md:rounded-3xl overflow-hidden mb-3 sm:mb-6 relative shadow-lg shadow-black/40 border border-white/5">
-                    <img src="landing page.png" 
-                         class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-out transform group-hover:scale-105 group-active:scale-95" 
-                         alt="Urban Palate" loading="lazy">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end sm:items-center justify-center p-3">
-                        <span class="border border-amber-500/50 text-amber-400 px-3 sm:px-5 py-1.5 sm:py-2 rounded-full uppercase text-[8px] sm:text-[9px] tracking-widest bg-black/40 backdrop-blur-md transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">Visit Site &rarr;</span>
-                    </div>
-                </div>
-                <div class="flex justify-between items-start">
-                    <div class="pr-2 min-w-0">
-                        <h3 class="text-base sm:text-2xl md:text-3xl font-serif mb-1 truncate group-hover:text-amber-400 transition-colors">Urban Palate</h3>
-                        <p class="text-parchment/50 text-[11px] sm:text-sm mb-2 sm:mb-4 line-clamp-2 leading-relaxed">Premium UI/UX design and architecture for the culinary industry.</p>
-                        <div class="flex flex-wrap gap-1 sm:gap-2 text-[8px] sm:text-[9px] uppercase tracking-widest font-semibold text-amber-500/80">
-                            <span class="border border-amber-500/20 bg-amber-500/5 px-2 sm:px-3 py-0.5 sm:py-1 rounded-full">UX / UI</span>
-                            <span class="border border-amber-500/20 bg-amber-500/5 px-2 sm:px-3 py-0.5 sm:py-1 rounded-full">Frontend</span>
-                        </div>
-                    </div>
-                    <span class="text-amber-500 font-serif italic text-sm sm:text-xl md:text-2xl shrink-0">04</span>
-                </div>
-            </a>
-
-            <!-- Project 5: Nails Website -->
-            <a href="https://nailsbykate.pythonanywhere.com" target="_blank" rel="noopener noreferrer" class="block reveal project-card group cursor-pointer">
-                <div class="aspect-[4/3] bg-neutral-900 rounded-xl sm:rounded-2xl md:rounded-3xl overflow-hidden mb-3 sm:mb-6 relative shadow-lg shadow-black/40 border border-white/5">
-                    <img src="nails.png" 
-                         class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-out transform group-hover:scale-105 group-active:scale-95" 
-                         alt="Nails by Kate site" loading="lazy">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end sm:items-center justify-center p-3">
-                        <span class="border border-amber-500/50 text-amber-400 px-3 sm:px-5 py-1.5 sm:py-2 rounded-full uppercase text-[8px] sm:text-[9px] tracking-widest bg-black/40 backdrop-blur-md transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">Visit Site &rarr;</span>
-                    </div>
-                </div>
-                <div class="flex justify-between items-start">
-                    <div class="pr-2 min-w-0">
-                        <h3 class="text-base sm:text-2xl md:text-3xl font-serif mb-1 truncate group-hover:text-amber-400 transition-colors">Nails Website</h3>
-                        <p class="text-parchment/50 text-[11px] sm:text-sm mb-2 sm:mb-4 line-clamp-2 leading-relaxed">Elegant service portfolio and appointment booking interface.</p>
-                        <div class="flex flex-wrap gap-1 sm:gap-2 text-[8px] sm:text-[9px] uppercase tracking-widest font-semibold text-amber-500/80">
-                            <span class="border border-amber-500/20 bg-amber-500/5 px-2 sm:px-3 py-0.5 sm:py-1 rounded-full">Beauty</span>
-                            <span class="border border-amber-500/20 bg-amber-500/5 px-2 sm:px-3 py-0.5 sm:py-1 rounded-full">Booking</span>
-                        </div>
-                    </div>
-                    <span class="text-amber-500 font-serif italic text-sm sm:text-xl md:text-2xl shrink-0">05</span>
-                </div>
-            </a>
-
-            <!-- Project 6: Ironclad Gear -->
-            <a href="https://orlantechinnovations.pythonanywhere.com" target="_blank" rel="noopener noreferrer" class="block reveal project-card group cursor-pointer" style="transition-delay: 0.1s;">
-                <div class="aspect-[4/3] bg-neutral-900 rounded-xl sm:rounded-2xl md:rounded-3xl overflow-hidden mb-3 sm:mb-6 relative shadow-lg shadow-black/40 border border-white/5">
-                    <img src="ironclad.png" 
-                         class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-out transform group-hover:scale-105 group-active:scale-95" 
-                         alt="Ironclad Gear E-Commerce" loading="lazy">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end sm:items-center justify-center p-3">
-                        <span class="border border-amber-500/50 text-amber-400 px-3 sm:px-5 py-1.5 sm:py-2 rounded-full uppercase text-[8px] sm:text-[9px] tracking-widest bg-black/40 backdrop-blur-md transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">Visit Site &rarr;</span>
-                    </div>
-                </div>
-                <div class="flex justify-between items-start">
-                    <div class="pr-2 min-w-0">
-                        <h3 class="text-base sm:text-2xl md:text-3xl font-serif mb-1 truncate group-hover:text-amber-400 transition-colors">Ironclad Gear</h3>
-                        <p class="text-parchment/50 text-[11px] sm:text-sm mb-2 sm:mb-4 line-clamp-2 leading-relaxed">High-security e-commerce store specializing in tactical and military gear.</p>
-                        <div class="flex flex-wrap gap-1 sm:gap-2 text-[8px] sm:text-[9px] uppercase tracking-widest font-semibold text-amber-500/80">
-                            <span class="border border-amber-500/20 bg-amber-500/5 px-2 sm:px-3 py-0.5 sm:py-1 rounded-full">E-Commerce</span>
-                            <span class="border border-amber-500/20 bg-amber-500/5 px-2 sm:px-3 py-0.5 sm:py-1 rounded-full">Django</span>
-                        </div>
-                    </div>
-                    <span class="text-amber-500 font-serif italic text-sm sm:text-xl md:text-2xl shrink-0">06</span>
-                </div>
-            </a>
-
-            <!-- Project 7: Leadpac Contractors -->
-            <a href="https://leadpacontractors.co.ke" target="_blank" rel="noopener noreferrer" class="block reveal project-card group cursor-pointer">
-                <div class="aspect-[4/3] bg-neutral-900 rounded-xl sm:rounded-2xl md:rounded-3xl overflow-hidden mb-3 sm:mb-6 relative shadow-lg shadow-black/40 border border-white/5">
-                    <img src="leadpac.png" 
-                         class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-out transform group-hover:scale-105 group-active:scale-95" 
-                         alt="Leadpac Contractors" loading="lazy">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end sm:items-center justify-center p-3">
-                        <span class="border border-amber-500/50 text-amber-400 px-3 sm:px-5 py-1.5 sm:py-2 rounded-full uppercase text-[8px] sm:text-[9px] tracking-widest bg-black/40 backdrop-blur-md transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">Visit Site &rarr;</span>
-                    </div>
-                </div>
-                <div class="flex justify-between items-start">
-                    <div class="pr-2 min-w-0">
-                        <h3 class="text-base sm:text-2xl md:text-3xl font-serif mb-1 truncate group-hover:text-amber-400 transition-colors">Leadpac Contractors</h3>
-                        <p class="text-parchment/50 text-[11px] sm:text-sm mb-2 sm:mb-4 line-clamp-2 leading-relaxed">Corporate web platform engineered for a premier construction enterprise.</p>
-                        <div class="flex flex-wrap gap-1 sm:gap-2 text-[8px] sm:text-[9px] uppercase tracking-widest font-semibold text-amber-500/80">
-                            <span class="border border-amber-500/20 bg-amber-500/5 px-2 sm:px-3 py-0.5 sm:py-1 rounded-full">Construction</span>
-                            <span class="border border-amber-500/20 bg-amber-500/5 px-2 sm:px-3 py-0.5 sm:py-1 rounded-full">Corporate</span>
-                        </div>
-                    </div>
-                    <span class="text-amber-500 font-serif italic text-sm sm:text-xl md:text-2xl shrink-0">07</span>
-                </div>
-            </a>
-
-            <!-- Project 8: Smart Inventory (Unlinked) -->
-            <div class="reveal project-card group cursor-default" style="transition-delay: 0.1s;">
-                <div class="aspect-[4/3] bg-neutral-900 rounded-xl sm:rounded-2xl md:rounded-3xl overflow-hidden mb-3 sm:mb-6 relative shadow-lg shadow-black/40 border border-white/5">
-                    <img src="inventory.png" 
-                         class="w-full h-full object-cover grayscale transition-all duration-700 ease-out" 
-                         alt="Smart Inventory System" loading="lazy">
-                </div>
-                <div class="flex justify-between items-start">
-                    <div class="pr-2 min-w-0">
-                        <h3 class="text-base sm:text-2xl md:text-3xl font-serif mb-1 truncate">Smart Inventory 📦</h3>
-                        <p class="text-parchment/50 text-[11px] sm:text-sm mb-2 sm:mb-4 line-clamp-2 leading-relaxed">Predictive stock management with real-time analytics.</p>
-                        <div class="flex flex-wrap gap-1 sm:gap-2 text-[8px] sm:text-[9px] uppercase tracking-widest font-semibold text-amber-500/80">
-                            <span class="border border-amber-500/30 bg-amber-500/10 px-2 sm:px-3 py-0.5 sm:py-1 rounded-full text-amber-400">Enterprise</span>
-                            <span class="border border-amber-500/20 bg-amber-500/5 px-2 sm:px-3 py-0.5 sm:py-1 rounded-full">Analytics</span>
-                        </div>
-                    </div>
-                    <span class="text-amber-500 font-serif italic text-sm sm:text-xl md:text-2xl shrink-0">08</span>
-                </div>
-            </div>
-
+        <div class="text-center text-xs text-white/40 tracking-widest uppercase">
+            Nairobi, Kenya • Est. 2024
         </div>
     </div>
-</section>
-    <!-- Testimonials Section -->
-    <section class="py-24 px-6 md:px-12 bg-parchment overflow-hidden">
-        <div class="max-w-7xl mx-auto">
-            <div class="reveal mb-16">
-                <h2 class="text-[10px] font-bold uppercase tracking-[0.4em] text-clay mb-6">Words from Partners</h2>
-                <h3 class="text-4xl md:text-6xl font-serif max-w-3xl">They trusted us to build their <span class="italic">digital future.</span></h3>
+
+    <!-- SECTION 1: Vanguard Fullscreen Video Hero -->
+    <section id="hero-video"
+        class="relative w-full h-screen min-h-[100dvh] flex items-center justify-start px-6 sm:px-10 lg:px-16 overflow-hidden">
+        <!-- Background Video -->
+        <video autoPlay muted loop playsInline class="absolute inset-0 w-full h-full object-cover -z-20">
+            <source
+                src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260606_154941_df1a96e1-a06f-450c-bd02-d863414cc1a0.mp4"
+                type="video/mp4">
+        </video>
+
+        <!-- Overlay Gradients for Depth & Legibility -->
+        <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent -z-10"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-black/40 -z-10"></div>
+
+        <!-- Content Overlay -->
+        <div class="max-w-4xl pt-16 z-10">
+            <!-- Tagline -->
+            <div class="animate-fade-up flex items-center gap-3 mb-6 lg:mb-8">
+                <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
+                <span class="text-white/70 text-xs sm:text-sm font-sans tracking-[0.3em] uppercase">World-Class Digital
+                    Collective</span>
             </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Testimonial 1 -->
-                <div class="reveal p-8 bg-white border border-obsidian/5 rounded-2xl shadow-sm" style="transition-delay: 0.1s;">
-                    <div class="flex gap-1 mb-6">
-                        <span class="text-clay">★</span><span class="text-clay">★</span><span class="text-clay">★</span><span class="text-clay">★</span><span class="text-clay">★</span>
-                    </div>
-                    <p class="text-lg font-light italic mb-8 text-obsidian/80">"The level of detail Orlantech brings to their systems is unparalleled. They didn't just build a school portal; they built a community hub that our parents love."</p>
+
+            <!-- Main Heading -->
+            <h1
+                class="animate-fade-up-delay-1 font-podium text-white uppercase leading-[0.92] tracking-tight text-[clamp(2.8rem,8vw,6.5rem)] mb-6">
+                Design.<br>
+                Disrupt.<br>
+                <span class="text-amber-500">Conquer.</span>
+            </h1>
+
+            <!-- Subtext -->
+            <p
+                class="animate-fade-up-delay-2 text-white/70 text-sm sm:text-base font-sans leading-relaxed max-w-md mb-8">
+                We build fierce, highly secure digital identities and full-stack enterprise systems that don't just turn
+                heads — <strong class="text-white">they lead.</strong>
+            </p>
+
+            <!-- CTA Row -->
+            <div class="animate-fade-up-delay-3 flex flex-wrap items-center gap-4 sm:gap-6 mb-12">
+                <a href="#work"
+                    class="group bg-amber-500 hover:bg-amber-400 text-black px-6 sm:px-8 py-3.5 sm:py-4 rounded-full text-xs font-bold tracking-widest uppercase transition-all duration-300 flex items-center gap-2">
+                    See Our Work
+                    <svg class="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
+                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                </a>
+
+                <div class="hidden sm:flex items-center gap-3 text-white/60 text-xs tracking-wider uppercase">
+                    <div
+                        class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-amber-500">
+                        ★</div>
                     <div>
-                        <p class="font-bold text-xs uppercase tracking-widest">Director, Pendo Schools</p>
-                        <p class="text-[10px] text-obsidian/40 uppercase tracking-widest">Education Partner</p>
+                        <div class="text-white font-semibold">Top-Rated Studio</div>
+                        <div class="text-[10px] text-white/50">Nairobi, Kenya</div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Testimonial 2 -->
-                <div class="reveal p-8 bg-white border border-obsidian/5 rounded-2xl shadow-sm" style="transition-delay: 0.2s;">
-                    <div class="flex gap-1 mb-6">
-                        <span class="text-clay">★</span><span class="text-clay">★</span><span class="text-clay">★</span><span class="text-clay">★</span><span class="text-clay">★</span>
-                    </div>
-                    <p class="text-lg font-light italic mb-8 text-obsidian/80">"Transitioning our church giving to digital was a huge hurdle. Orlantech's M-Pesa integration was seamless, secure, and incredibly user-friendly."</p>
-                    <div>
-                        <p class="font-bold text-xs uppercase tracking-widest">Administrator, Kangemi SDA</p>
-                        <p class="text-[10px] text-obsidian/40 uppercase tracking-widest">Community Client</p>
+            <!-- Stats Row -->
+            <div class="animate-fade-up-delay-4 flex flex-wrap gap-6 sm:gap-12 lg:gap-16 pt-6 border-t border-white/10">
+                <div>
+                    <div class="font-sans text-white text-2xl sm:text-4xl font-bold tracking-tight">40+</div>
+                    <div class="text-white/50 text-[9px] sm:text-xs tracking-widest uppercase mt-1">Systems Shipped
                     </div>
                 </div>
-
-                <!-- Testimonial 3 -->
-                <div class="reveal p-8 bg-white border border-obsidian/5 rounded-2xl shadow-sm" style="transition-delay: 0.3s;">
-                    <div class="flex gap-1 mb-6">
-                        <span class="text-clay">★</span><span class="text-clay">★</span><span class="text-clay">★</span><span class="text-clay">★</span><span class="text-clay">★</span>
+                <div>
+                    <div class="font-sans text-white text-2xl sm:text-4xl font-bold tracking-tight">98%</div>
+                    <div class="text-white/50 text-[9px] sm:text-xs tracking-widest uppercase mt-1">Client Retention
                     </div>
-                    <p class="text-lg font-light italic mb-8 text-obsidian/80">"Working with a studio that understands the intersection of high-end aesthetics and enterprise-level stability changed everything for our brand."</p>
-                    <div>
-                        <p class="font-bold text-xs uppercase tracking-widest">CEO, Urban Palate</p>
-                        <p class="text-[10px] text-obsidian/40 uppercase tracking-widest">Creative Partner</p>
+                </div>
+                <div>
+                    <div class="font-sans text-amber-500 text-2xl sm:text-4xl font-bold tracking-tight">100%</div>
+                    <div class="text-white/50 text-[9px] sm:text-xs tracking-widest uppercase mt-1">Secure Architecture
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer id="contact" class="py-16 md:py-24 px-6 md:px-12 bg-parchment">
+    <!-- SECTION 2: Interactive Spotlight Reveal Hero Section -->
+    <section id="spotlight-interactive" class="relative w-full h-screen min-h-[100dvh] bg-black overflow-hidden">
+        <!-- Base Background Image -->
+        <div class="hero-zoom absolute inset-0 bg-center bg-cover bg-no-repeat z-10 opacity-70"
+            style="background-image: url('https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260609_195923_b0ba8ace-1d1d-4f2c-9a28-1ab84b330680.png&w=1280&q=85');">
+        </div>
+
+        <!-- Hidden Canvas & Dynamic Reveal Image Layer -->
+        <canvas id="spotlightCanvas" class="absolute inset-0 pointer-events-none hidden"></canvas>
+        <div id="revealLayer"
+            class="absolute inset-0 bg-center bg-cover bg-no-repeat z-30 pointer-events-none opacity-90"
+            style="background-image: url('https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260609_201152_bba90a12-bf12-459f-91f0-51f237dbaf3b.png&w=1280&q=85');">
+        </div>
+
+        <!-- Overlay Floating Content -->
+        <div
+            class="absolute top-[14%] left-0 right-0 flex flex-col items-center text-center px-5 pointer-events-none z-50">
+            <h2 class="text-white leading-[0.95]">
+                <span
+                    class="block font-playfair italic font-normal text-4xl sm:text-7xl md:text-8xl tracking-[-0.05em] text-white/90">Architecture
+                    holds</span>
+                <span
+                    class="block font-sans font-bold text-4xl sm:text-7xl md:text-8xl -mt-1 tracking-[-0.08em] text-amber-500">tales
+                    of innovation</span>
+            </h2>
+        </div>
+
+        <!-- Bottom-Left Narrative -->
+        <div class="hidden sm:block absolute bottom-14 left-10 md:left-14 max-w-[280px] z-50 pointer-events-none">
+            <p
+                class="text-xs sm:text-sm text-white/80 leading-relaxed bg-black/40 backdrop-blur-md p-4 rounded-xl border border-white/10">
+                Every line of code and architectural layout records a chapter of digital evolution, bridging core
+                backend logic with visual elegance.
+            </p>
+        </div>
+
+        <!-- Bottom-Right Interactive CTA -->
+        <div
+            class="absolute bottom-10 sm:bottom-24 left-5 right-5 sm:left-auto sm:right-10 md:right-14 max-w-full sm:max-w-[280px] flex flex-col items-start gap-4 z-50">
+            <p
+                class="text-xs sm:text-sm text-white/80 leading-relaxed bg-black/40 backdrop-blur-md p-4 rounded-xl border border-white/10">
+                Interactive systems allow you to trace how robust security, predictive analytics, and design combine
+                beneath your application's hood.
+            </p>
+            <a href="#story"
+                class="w-full sm:w-auto text-center bg-amber-500 hover:bg-amber-400 text-black text-xs font-bold uppercase tracking-widest px-7 py-3.5 rounded-full transition-all hover:scale-[1.03] active:scale-95 shadow-lg shadow-amber-500/20">
+                Discover Our Craft
+            </a>
+        </div>
+    </section>
+
+    <!-- SECTION 3: The Orlantech Story & Narrative -->
+    <section id="story" class="py-24 px-6 md:px-12 bg-white text-obsidian border-y border-obsidian/5 overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+                <div class="reveal-element">
+                    <h2 class="text-xs font-bold uppercase tracking-[0.4em] text-amber-500 mb-4">The Orlantech Narrative
+                    </h2>
+                    <h3 class="text-4xl md:text-5xl font-serif leading-tight mb-8">
+                        We started with a simple belief: technology should feel as <span
+                            class="italic text-amber-500">natural as breathing.</span>
+                    </h3>
+                    <div class="space-y-6 text-obsidian/70 leading-relaxed font-light text-sm md:text-base">
+                        <p>
+                            Born in the vibrant tech landscape of Nairobi, Orlantech Innovations was founded to
+                            challenge cold, cookie-cutter templates. We saw a software world full of plain tools and
+                            decided to build secure, robust, and beautiful applications.
+                        </p>
+                        <p>
+                            Driven by a passion for backend precision, full-stack Django architecture, and creative UX
+                            design, we engineer systems where every schema is as solid as the code that powers it.
+                        </p>
+                    </div>
+
+                    <div class="mt-12 grid grid-cols-2 gap-8 pt-8 border-t border-obsidian/10">
+                        <div>
+                            <span class="block text-3xl font-serif text-amber-500 mb-1">40+</span>
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-obsidian/50">Engineered
+                                Solutions</span>
+                        </div>
+                        <div>
+                            <span class="block text-3xl font-serif text-amber-500 mb-1">98%</span>
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-obsidian/50">Client
+                                Trust</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal-element relative">
+                    <div class="aspect-[4/5] bg-obsidian rounded-3xl overflow-hidden shadow-2xl relative group">
+                        <img src="Grain Texture Impressionistic Weathered Frame Dust Particles And Textures Backgrounds _ JPG Free Download - Pikbest.jpeg"
+                            class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700"
+                            alt="Orlantech Frame">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent flex flex-col justify-end p-8 text-white">
+                            <span class="text-5xl font-serif italic text-amber-500 mb-2">O.</span>
+                            <p class="text-xs font-bold uppercase tracking-[0.3em] text-white/70">Nairobi Headquarters
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: Work & Selected Archive -->
+    <section id="work"
+        class="py-16 md:py-24 px-4 sm:px-6 md:px-12 bg-obsidian text-parchment rounded-t-[2.5rem] md:rounded-t-[4rem] overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <header class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 sm:mb-16 gap-4">
+                <div>
+                    <h2 class="text-3xl sm:text-5xl md:text-6xl font-serif mb-2 tracking-tight">Selected Archive</h2>
+                    <p class="text-parchment/40 text-[10px] md:text-xs uppercase tracking-[0.2em] font-semibold italic">
+                        Curated Works 2024 — 2026</p>
+                </div>
+                <div class="hidden md:block">
+                    <p class="text-amber-500 text-xs font-bold uppercase tracking-[0.3em] flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
+                        Production Code & Systems
+                    </p>
+                </div>
+            </header>
+
+            <!-- 2-by-2 Responsive Portfolio Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-12">
+
+                <!-- Project 1: Pendo Management -->
+                <a href="https://orlando.pythonanywhere.com" target="_blank" rel="noopener noreferrer"
+                    class="block reveal-element project-card group">
+                    <div
+                        class="aspect-[4/3] bg-neutral-900 rounded-2xl overflow-hidden mb-4 relative shadow-lg border border-white/10">
+                        <img src="pendo.png"
+                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-105"
+                            alt="Pendo Management">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                            <span
+                                class="border border-amber-500 text-amber-400 px-4 py-1.5 rounded-full uppercase text-[9px] tracking-widest bg-black/60 backdrop-blur-md">Visit
+                                Site &rarr;</span>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-xl sm:text-2xl font-serif group-hover:text-amber-500 transition-colors">
+                                Pendo Management</h3>
+                            <p class="text-parchment/50 text-xs mt-1 mb-2">Modern educational ecosystem with intelligent
+                                role-based tracking.</p>
+                            <div class="flex gap-2 text-[9px] uppercase tracking-widest font-semibold text-amber-500">
+                                <span
+                                    class="border border-amber-500/20 bg-amber-500/10 px-2 py-0.5 rounded-full">Django</span>
+                                <span
+                                    class="border border-amber-500/20 bg-amber-500/10 px-2 py-0.5 rounded-full">PostgreSQL</span>
+                            </div>
+                        </div>
+                        <span class="text-amber-500 font-serif italic text-xl">01</span>
+                    </div>
+                </a>
+
+                <!-- Project 2: Church Web App -->
+                <a href="https://kangemiambassadors.pythonanywhere.com" target="_blank" rel="noopener noreferrer"
+                    class="block reveal-element project-card group">
+                    <div
+                        class="aspect-[4/3] bg-neutral-900 rounded-2xl overflow-hidden mb-4 relative shadow-lg border border-white/10">
+                        <img src="chrch.png"
+                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-105"
+                            alt="SDA Church Hub">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                            <span
+                                class="border border-amber-500 text-amber-400 px-4 py-1.5 rounded-full uppercase text-[9px] tracking-widest bg-black/60 backdrop-blur-md">Visit
+                                Site &rarr;</span>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-xl sm:text-2xl font-serif group-hover:text-amber-500 transition-colors">
+                                Church Web App</h3>
+                            <p class="text-parchment/50 text-xs mt-1 mb-2">Community platform with integrated real-time
+                                M-Pesa STK Push.</p>
+                            <div class="flex gap-2 text-[9px] uppercase tracking-widest font-semibold text-amber-500">
+                                <span
+                                    class="border border-amber-500/20 bg-amber-500/10 px-2 py-0.5 rounded-full">FinTech</span>
+                                <span
+                                    class="border border-amber-500/20 bg-amber-500/10 px-2 py-0.5 rounded-full">Community</span>
+                            </div>
+                        </div>
+                        <span class="text-amber-500 font-serif italic text-xl">02</span>
+                    </div>
+                </a>
+
+                <!-- Project 3: LittleBox Foundation -->
+                <a href="https://littlebox.pythonanywhere.com" target="_blank" rel="noopener noreferrer"
+                    class="block reveal-element project-card group">
+                    <div
+                        class="aspect-[4/3] bg-neutral-900 rounded-2xl overflow-hidden mb-4 relative shadow-lg border border-white/10">
+                        <img src="littlebox.png"
+                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-105"
+                            alt="Little Box Foundation">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                            <span
+                                class="border border-amber-500 text-amber-400 px-4 py-1.5 rounded-full uppercase text-[9px] tracking-widest bg-black/60 backdrop-blur-md">Visit
+                                Site &rarr;</span>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-xl sm:text-2xl font-serif group-hover:text-amber-500 transition-colors">
+                                LittleBox Foundation</h3>
+                            <p class="text-parchment/50 text-xs mt-1 mb-2">Social impact and outreach engagement
+                                platform.</p>
+                            <div class="flex gap-2 text-[9px] uppercase tracking-widest font-semibold text-amber-500">
+                                <span
+                                    class="border border-amber-500/20 bg-amber-500/10 px-2 py-0.5 rounded-full">Non-Profit</span>
+                                <span
+                                    class="border border-amber-500/20 bg-amber-500/10 px-2 py-0.5 rounded-full">Frontend</span>
+                            </div>
+                        </div>
+                        <span class="text-amber-500 font-serif italic text-xl">03</span>
+                    </div>
+                </a>
+
+                <!-- Project 4: Urban Palate -->
+                <a href="https://websentinel.pythonanywhere.com" target="_blank" rel="noopener noreferrer"
+                    class="block reveal-element project-card group">
+                    <div
+                        class="aspect-[4/3] bg-neutral-900 rounded-2xl overflow-hidden mb-4 relative shadow-lg border border-white/10">
+                        <img src="landing page.png"
+                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-105"
+                            alt="Urban Palate">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                            <span
+                                class="border border-amber-500 text-amber-400 px-4 py-1.5 rounded-full uppercase text-[9px] tracking-widest bg-black/60 backdrop-blur-md">Visit
+                                Site &rarr;</span>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-xl sm:text-2xl font-serif group-hover:text-amber-500 transition-colors">
+                                Urban Palate</h3>
+                            <p class="text-parchment/50 text-xs mt-1 mb-2">Premium UI/UX design and architecture for
+                                culinary industry.</p>
+                            <div class="flex gap-2 text-[9px] uppercase tracking-widest font-semibold text-amber-500">
+                                <span class="border border-amber-500/20 bg-amber-500/10 px-2 py-0.5 rounded-full">UX /
+                                    UI</span>
+                                <span
+                                    class="border border-amber-500/20 bg-amber-500/10 px-2 py-0.5 rounded-full">Frontend</span>
+                            </div>
+                        </div>
+                        <span class="text-amber-500 font-serif italic text-xl">04</span>
+                    </div>
+                </a>
+
+                <!-- Project 5: Nails Website -->
+                <a href="https://nailsbykate.pythonanywhere.com" target="_blank" rel="noopener noreferrer"
+                    class="block reveal-element project-card group">
+                    <div
+                        class="aspect-[4/3] bg-neutral-900 rounded-2xl overflow-hidden mb-4 relative shadow-lg border border-white/10">
+                        <img src="nails.png"
+                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-105"
+                            alt="Nails by Kate">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                            <span
+                                class="border border-amber-500 text-amber-400 px-4 py-1.5 rounded-full uppercase text-[9px] tracking-widest bg-black/60 backdrop-blur-md">Visit
+                                Site &rarr;</span>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-xl sm:text-2xl font-serif group-hover:text-amber-500 transition-colors">
+                                Nails Website</h3>
+                            <p class="text-parchment/50 text-xs mt-1 mb-2">Elegant service portfolio and appointment
+                                booking interface.</p>
+                            <div class="flex gap-2 text-[9px] uppercase tracking-widest font-semibold text-amber-500">
+                                <span
+                                    class="border border-amber-500/20 bg-amber-500/10 px-2 py-0.5 rounded-full">Beauty</span>
+                                <span
+                                    class="border border-amber-500/20 bg-amber-500/10 px-2 py-0.5 rounded-full">Booking</span>
+                            </div>
+                        </div>
+                        <span class="text-amber-500 font-serif italic text-xl">05</span>
+                    </div>
+                </a>
+
+                <!-- Project 6: Ironclad Gear -->
+                <a href="https://orlantechinnovations.pythonanywhere.com" target="_blank" rel="noopener noreferrer"
+                    class="block reveal-element project-card group">
+                    <div
+                        class="aspect-[4/3] bg-neutral-900 rounded-2xl overflow-hidden mb-4 relative shadow-lg border border-white/10">
+                        <img src="ironclad.png"
+                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-105"
+                            alt="Ironclad Gear">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                            <span
+                                class="border border-amber-500 text-amber-400 px-4 py-1.5 rounded-full uppercase text-[9px] tracking-widest bg-black/60 backdrop-blur-md">Visit
+                                Site &rarr;</span>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-xl sm:text-2xl font-serif group-hover:text-amber-500 transition-colors">
+                                Ironclad Gear</h3>
+                            <p class="text-parchment/50 text-xs mt-1 mb-2">High-security e-commerce store specializing
+                                in tactical gear.</p>
+                            <div class="flex gap-2 text-[9px] uppercase tracking-widest font-semibold text-amber-500">
+                                <span
+                                    class="border border-amber-500/20 bg-amber-500/10 px-2 py-0.5 rounded-full">E-Commerce</span>
+                                <span
+                                    class="border border-amber-500/20 bg-amber-500/10 px-2 py-0.5 rounded-full">Django</span>
+                            </div>
+                        </div>
+                        <span class="text-amber-500 font-serif italic text-xl">06</span>
+                    </div>
+                </a>
+
+                <!-- Project 7: Leadpac Contractors -->
+                <a href="https://leadpacontractors.co.ke" target="_blank" rel="noopener noreferrer"
+                    class="block reveal-element project-card group">
+                    <div
+                        class="aspect-[4/3] bg-neutral-900 rounded-2xl overflow-hidden mb-4 relative shadow-lg border border-white/10">
+                        <img src="leadpac.png"
+                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-105"
+                            alt="Leadpac Contractors">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                            <span
+                                class="border border-amber-500 text-amber-400 px-4 py-1.5 rounded-full uppercase text-[9px] tracking-widest bg-black/60 backdrop-blur-md">Visit
+                                Site &rarr;</span>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-xl sm:text-2xl font-serif group-hover:text-amber-500 transition-colors">
+                                Leadpac Contractors</h3>
+                            <p class="text-parchment/50 text-xs mt-1 mb-2">Corporate web platform engineered for
+                                construction enterprise.</p>
+                            <div class="flex gap-2 text-[9px] uppercase tracking-widest font-semibold text-amber-500">
+                                <span
+                                    class="border border-amber-500/20 bg-amber-500/10 px-2 py-0.5 rounded-full">Corporate</span>
+                                <span
+                                    class="border border-amber-500/20 bg-amber-500/10 px-2 py-0.5 rounded-full">Construction</span>
+                            </div>
+                        </div>
+                        <span class="text-amber-500 font-serif italic text-xl">07</span>
+                    </div>
+                </a>
+
+                <!-- Project 8: Smart Inventory -->
+                <div class="reveal-element project-card group">
+                    <div
+                        class="aspect-[4/3] bg-neutral-900 rounded-2xl overflow-hidden mb-4 relative shadow-lg border border-white/10">
+                        <img src="inventory.png" class="w-full h-full object-cover grayscale"
+                            alt="Smart Inventory System">
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-xl sm:text-2xl font-serif">Smart Inventory 📦</h3>
+                            <p class="text-parchment/50 text-xs mt-1 mb-2">Predictive stock management with real-time
+                                analytics.</p>
+                            <div class="flex gap-2 text-[9px] uppercase tracking-widest font-semibold text-amber-500">
+                                <span
+                                    class="border border-amber-500/20 bg-amber-500/10 px-2 py-0.5 rounded-full">Enterprise</span>
+                                <span
+                                    class="border border-amber-500/20 bg-amber-500/10 px-2 py-0.5 rounded-full">Analytics</span>
+                            </div>
+                        </div>
+                        <span class="text-amber-500 font-serif italic text-xl">08</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: Footer & Contact -->
+    <footer id="contact" class="py-16 md:py-24 px-6 md:px-12 bg-black text-parchment border-t border-white/10">
         <div class="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-start gap-12 lg:gap-16">
-            <div class="reveal flex-1 w-full">
-                <h2 class="text-5xl md:text-7xl lg:text-8xl font-serif leading-[0.9] mb-8 md:mb-12 tracking-tighter">Let's talk<br><span class="italic text-clay">innovation.</span></h2>
+            <div class="reveal-element flex-1 w-full">
+                <h2 class="text-4xl sm:text-6xl lg:text-7xl font-serif leading-[0.95] mb-8 tracking-tighter">
+                    Let's build secure<br><span class="italic text-amber-500">innovation.</span>
+                </h2>
                 <div class="group inline-block w-full sm:w-auto">
-                    <a href="mailto:hello@orlantechinnovations@gmail.com" class="text-xl md:text-3xl lg:text-4xl font-light border-b border-obsidian/10 pb-3 group-hover:text-clay group-hover:border-clay transition-all duration-500 block break-all">
+                    <a href="mailto:hello@orlantechinnovations@gmail.com"
+                        class="text-lg sm:text-2xl md:text-3xl font-light border-b border-white/20 pb-3 group-hover:text-amber-500 group-hover:border-amber-500 transition-all duration-300 block break-all">
                         hello@orlantechinnovations@gmail.com
                     </a>
                 </div>
             </div>
-            
-            <div class="reveal w-full lg:w-auto grid grid-cols-2 gap-8 md:gap-24">
+
+            <div class="reveal-element w-full lg:w-auto grid grid-cols-2 gap-8 md:gap-16">
                 <div>
-                    <h4 class="text-[9px] font-bold uppercase tracking-[0.3em] mb-4 md:mb-6 text-obsidian/40">Services</h4>
-                    <ul class="space-y-3 font-semibold text-xs md:text-sm">
-                        <li><a href="#" class="hover:text-clay transition-colors">System Dev</a></li>
-                        <li><a href="#" class="hover:text-clay transition-colors">Web Architecture</a></li>
-                        <li><a href="#" class="hover:text-clay transition-colors">UX Design</a></li>
-                        <li><a href="#" class="hover:text-clay transition-colors">Consultancy</a></li>
+                    <h4 class="text-[10px] font-bold uppercase tracking-[0.3em] mb-4 text-white/40">Capabilities</h4>
+                    <ul class="space-y-3 font-medium text-xs md:text-sm text-white/80">
+                        <li><a href="#" class="hover:text-amber-500 transition-colors">Django Stack Dev</a></li>
+                        <li><a href="#" class="hover:text-amber-500 transition-colors">Penetration Testing</a></li>
+                        <li><a href="#" class="hover:text-amber-500 transition-colors">UI/UX Architecture</a></li>
+                        <li><a href="#" class="hover:text-amber-500 transition-colors">System Security</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-[9px] font-bold uppercase tracking-[0.3em] mb-4 md:mb-6 text-obsidian/40">Connect</h4>
-                    <div class="flex flex-col space-y-3 font-semibold text-xs md:text-sm">
-                        <a href="https://github.com/ORLAND0HENRY/" class="hover:text-clay transition-colors flex items-center gap-2">GitHub <span class="text-[7px] opacity-40">↗</span></a>
-                        <a href="https://ke.linkedin.com/in/orlando-henry" class="hover:text-clay transition-colors flex items-center gap-2">LinkedIn <span class="text-[7px] opacity-40">↗</span></a>
-                        <a href="https://www.instagram.com/orlantechinnovations/" class="hover:text-clay transition-colors flex items-center gap-2">Instagram <span class="text-[7px] opacity-40">↗</span></a>
+                    <h4 class="text-[10px] font-bold uppercase tracking-[0.3em] mb-4 text-white/40">Connect</h4>
+                    <div class="flex flex-col space-y-3 font-medium text-xs md:text-sm text-white/80">
+                        <a href="https://github.com/ORLAND0HENRY/" target="_blank"
+                            class="hover:text-amber-500 transition-colors">GitHub ↗</a>
+                        <a href="https://ke.linkedin.com/in/orlando-henry" target="_blank"
+                            class="hover:text-amber-500 transition-colors">LinkedIn ↗</a>
+                        <a href="https://www.instagram.com/orlantechinnovations/" target="_blank"
+                            class="hover:text-amber-500 transition-colors">Instagram ↗</a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="max-w-7xl mx-auto mt-24 md:mt-40 pt-8 border-t border-obsidian/5 flex flex-col md:flex-row justify-between text-[8px] md:text-[9px] font-bold uppercase tracking-[0.3em] md:tracking-[0.4em] text-obsidian/30 gap-4">
+        <div
+            class="max-w-7xl mx-auto mt-20 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between text-[9px] font-bold uppercase tracking-[0.3em] text-white/40 gap-4">
             <p>© 2026 ORLANTECH INNOVATIONS</p>
-            <p class="md:block">NAIROBI, KENYA</p>
-            <p class="hidden sm:block">WHERE TECH MEETS CREATIVITY</p>
+            <p>NAIROBI, KENYA</p>
+            <p>WHERE TECH MEETS CREATIVITY</p>
         </div>
     </footer>
-    <script>
-        const observerOptions = { 
-            threshold: 0.1,
-            rootMargin: '0px 0px -40px 0px'
-        };
 
+    <!-- Interactive Script Mechanics -->
+    <script>
+        // Mobile Menu Toggle logic
+        function toggleMobileMenu(open) {
+            const menu = document.getElementById('mobile-menu');
+            if (open) {
+                menu.classList.remove('opacity-0', 'invisible');
+                menu.classList.add('opacity-100', 'visible');
+                document.body.style.overflow = 'hidden';
+            } else {
+                menu.classList.remove('opacity-100', 'visible');
+                menu.classList.add('opacity-0', 'invisible');
+                document.body.style.overflow = '';
+            }
+        }
+
+        // Scroll Observer for Fade Up Animations
+        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -40px 0px' };
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -548,60 +773,64 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        document.querySelectorAll('.reveal-element').forEach(el => observer.observe(el));
 
-        function toggleMenu() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('open');
-            document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
+        // Spotlight Reveal Mechanic Script (Pure Native JS Implementation)
+        const spotlightSection = document.getElementById('spotlight-interactive');
+        const revealLayer = document.getElementById('revealLayer');
+        const canvas = document.getElementById('spotlightCanvas');
+        const ctx = canvas.getContext('2d');
+
+        const SPOTLIGHT_R = 260;
+        let mouse = { x: -999, y: -999 };
+        let smooth = { x: -999, y: -999 };
+
+        function updateCanvasSize() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', updateCanvasSize);
+        updateCanvasSize();
+
+        spotlightSection.addEventListener('mousemove', (e) => {
+            const rect = spotlightSection.getBoundingClientRect();
+            mouse.x = e.clientX - rect.left;
+            mouse.y = e.clientY - rect.top;
+        });
+
+        function renderSpotlight() {
+            // Lerp mouse positions for smooth trailing mask
+            smooth.x += (mouse.x - smooth.x) * 0.1;
+            smooth.y += (mouse.y - smooth.y) * 0.1;
+
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            if (smooth.x > -500) {
+                const grad = ctx.createRadialGradient(smooth.x, smooth.y, 0, smooth.x, smooth.y, SPOTLIGHT_R);
+                grad.addColorStop(0, 'rgba(255,255,255,1)');
+                grad.addColorStop(0.4, 'rgba(255,255,255,1)');
+                grad.addColorStop(0.6, 'rgba(255,255,255,0.75)');
+                grad.addColorStop(0.75, 'rgba(255,255,255,0.4)');
+                grad.addColorStop(0.88, 'rgba(255,255,255,0.12)');
+                grad.addColorStop(1, 'rgba(255,255,255,0)');
+
+                ctx.fillStyle = grad;
+                ctx.beginPath();
+                ctx.arc(smooth.x, smooth.y, SPOTLIGHT_R, 0, Math.PI * 2);
+                ctx.fill();
+
+                const dataUrl = canvas.toDataURL();
+                revealLayer.style.maskImage = `url(${dataUrl})`;
+                revealLayer.style.webkitMaskImage = `url(${dataUrl})`;
+                revealLayer.style.maskSize = '100% 100%';
+                revealLayer.style.webkitMaskSize = '100% 100%';
+            }
+
+            requestAnimationFrame(renderSpotlight);
         }
 
-        window.addEventListener('scroll', () => {
-            const nav = document.querySelector('nav');
-            const currentScroll = window.pageYOffset;
-
-            if (currentScroll > 50) {
-                nav.classList.add('backdrop-blur-md', 'bg-obsidian/10', 'py-4');
-                nav.classList.remove('py-6');
-            } else {
-                nav.classList.remove('backdrop-blur-md', 'bg-obsidian/10', 'py-4');
-                nav.classList.add('py-6');
-            }
-        });
+        requestAnimationFrame(renderSpotlight);
     </script>
-
-    
-   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": ["Organization", "ProfessionalService"],
-      "@id": "https://orland0henry.github.io/orlanweb/#organization",
-      "name": "Orlantech Innovations",
-      "alternateName": "Orlantech",
-      "description": "Nairobi-based tech agency specializing in secure full-stack Django web development and business automation systems.",
-      "url": "https://orland0henry.github.io/orlanweb/",
-      "logo": "https://orland0henry.github.io/orlanweb/orlan.jpg",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Nairobi",
-        "addressCountry": "KE"
-      },
-      "knowsAbout": [
-        "Django Web Development",
-        "Cybersecurity",
-        "Penetration Testing",
-        "Software Architecture"
-      ],
-      "sameAs": [
-        "https://github.com/ORLAND0HENRY",
-        "https://ke.linkedin.com/in/orlando-henry",
-        "https://www.tiktok.com/@thewebsentinel"
-      ]
-    }
-  ]
-}
-</script>
+</body>
 
 </html>
