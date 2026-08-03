@@ -164,14 +164,14 @@
 
     <!-- Fixed Header Navigation Bar -->
     <nav
-        class="fixed top-0 left-0 right-0 z-[100] flex items-center justify-between px-4 sm:px-8 lg:px-16 py-4 sm:py-6 backdrop-blur-md bg-black/40 border-b border-white/10 transition-all duration-300">
+        class="fixed top-0 left-0 right-0 z-[100] flex items-center justify-between px-4 sm:px-8 lg:px-16 py-4 sm:py-6 backdrop-blur-md bg-black/50 border-b border-white/10 transition-all duration-300">
         <!-- Brand Wordmark -->
         <a href="#" class="flex items-center gap-2 sm:gap-3 group">
             <svg class="w-5 h-5 sm:w-6 sm:h-6 fill-amber-500 group-hover:rotate-12 transition-transform duration-300 shrink-0"
                 viewBox="0 0 256 256">
                 <path d="M 256 256 L 128 256 L 0 128 L 128 128 Z M 256 128 L 128 128 L 0 0 L 128 0 Z" />
             </svg>
-            <span class="text-white text-base sm:text-xl md:text-2xl font-podium uppercase tracking-wider truncate">ORLANTECH <span
+            <span class="text-white text-sm sm:text-xl md:text-2xl font-podium uppercase tracking-wider truncate">ORLANTECH <span
                     class="text-amber-500">INNOVATIONS</span></span>
         </a>
 
@@ -203,11 +203,11 @@
         </div>
 
         <!-- Mobile Hamburger -->
-        <button onclick="toggleMobileMenu(true)" class="md:hidden flex flex-col justify-center items-center w-10 h-10 space-y-1.5 p-2 focus:outline-none bg-white/5 rounded-lg border border-white/10"
+        <button onclick="toggleMobileMenu(true)" class="md:hidden flex flex-col justify-center items-center w-9 h-9 space-y-1 p-1.5 focus:outline-none bg-white/10 rounded-lg border border-white/20 shrink-0"
             aria-label="Open Menu">
-            <span class="w-5 h-0.5 bg-white rounded-full"></span>
-            <span class="w-5 h-0.5 bg-white rounded-full"></span>
-            <span class="w-3.5 h-0.5 bg-amber-500 rounded-full self-start ml-0.5"></span>
+            <span class="w-4 h-0.5 bg-white rounded-full"></span>
+            <span class="w-4 h-0.5 bg-white rounded-full"></span>
+            <span class="w-2.5 h-0.5 bg-amber-500 rounded-full self-start ml-0.5"></span>
         </button>
     </nav>
 
@@ -215,8 +215,8 @@
     <div id="mobile-menu"
         class="fixed inset-0 z-[150] bg-black/98 backdrop-blur-xl opacity-0 invisible flex flex-col justify-between p-6 sm:p-12 transition-all">
         <div class="flex justify-between items-center w-full">
-            <span class="text-white font-podium text-lg sm:text-xl tracking-wider">ORLANTECH <span class="text-amber-500">INNOVATIONS</span></span>
-            <button onclick="toggleMobileMenu(false)" class="text-white hover:text-amber-500 p-2 text-2xl w-10 h-10 flex items-center justify-center rounded-full bg-white/10"
+            <span class="text-white font-podium text-base sm:text-xl tracking-wider">ORLANTECH <span class="text-amber-500">INNOVATIONS</span></span>
+            <button onclick="toggleMobileMenu(false)" class="text-white hover:text-amber-500 p-2 text-xl w-9 h-9 flex items-center justify-center rounded-full bg-white/10"
                 aria-label="Close Menu">✕</button>
         </div>
 
@@ -232,50 +232,49 @@
                 class="font-podium text-2xl sm:text-3xl text-white uppercase tracking-wider hover:text-amber-500 transition-colors">Our
                 Story</a>
             <a href="#contact" onclick="toggleMobileMenu(false)"
-                class="mt-4 border border-amber-500 bg-amber-500/10 text-amber-500 px-8 py-3.5 rounded-full text-xs tracking-widest uppercase font-semibold w-full max-w-xs shadow-lg shadow-amber-500/10">Get
+                class="mt-2 border border-amber-500 bg-amber-500/10 text-amber-500 px-8 py-3 rounded-full text-xs tracking-widest uppercase font-semibold w-full max-w-xs shadow-lg shadow-amber-500/10">Get
                 In Touch</a>
         </div>
 
-        <div class="text-center text-[10px] text-white/40 tracking-widest uppercase pb-4">
+        <div class="text-center text-[10px] text-white/40 tracking-widest uppercase pb-2">
             Nairobi, Kenya • Est. 2026
         </div>
     </div>
 
     <!-- SECTION 1: Vanguard Fullscreen Video Hero -->
     <section id="hero-video"
-        class="relative w-full min-h-[100dvh] flex items-center justify-start px-4 sm:px-8 lg:px-16 py-24 sm:py-28 overflow-hidden">
+        class="relative w-full min-h-[100dvh] h-auto flex flex-col justify-center px-4 sm:px-8 lg:px-16 pt-32 pb-16 sm:py-28 overflow-hidden">
         <!-- Background Video -->
-        <video autoPlay muted loop playsInline class="absolute inset-0 w-full h-full object-cover -z-20">
+        <video autoPlay muted loop playsInline class="absolute inset-0 w-full h-full object-cover -z-20 scale-105">
             <source
                 src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260606_154941_df1a96e1-a06f-450c-bd02-d863414cc1a0.mp4"
                 type="video/mp4">
         </video>
 
-        <!-- Overlay Gradients for Depth & Legibility -->
-        <div class="absolute inset-0 bg-gradient-to-r from-black/95 via-black/70 to-black/30 sm:to-transparent -z-10"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-black/40 -z-10"></div>
+        <!-- Overlay Gradients for Depth & Legibility (Enhanced heavy mobile backdrop blending) -->
+        <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-black/80 to-black/70 sm:bg-gradient-to-r sm:from-black/95 sm:via-black/70 sm:to-black/30 -z-10"></div>
 
         <!-- Content Overlay -->
         <div class="w-full max-w-4xl z-10 my-auto">
             <!-- Tagline -->
-            <div class="animate-fade-up flex items-center gap-3 mb-4 sm:mb-6">
+            <div class="animate-fade-up flex items-center gap-2.5 mb-4 sm:mb-6">
                 <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse shrink-0"></span>
-                <span class="text-white/70 text-[10px] sm:text-xs font-sans tracking-[0.25em] sm:tracking-[0.3em] uppercase">World-Class Digital
+                <span class="text-white/80 text-[10px] sm:text-xs font-sans tracking-[0.2em] sm:tracking-[0.3em] uppercase">World-Class Digital
                     Collective</span>
             </div>
 
             <!-- Main Heading -->
-            <h1 class="animate-fade-up-delay-1 font-podium text-white uppercase leading-[0.95] sm:leading-[0.92] tracking-tight text-[clamp(2.2rem,7vw,5.5rem)] mb-6"> Tech<br> Meets Creativity<br> <span class="text-amber-500">and Passion.</span> </h1>
+            <h1 class="animate-fade-up-delay-1 font-podium text-white uppercase leading-[0.95] tracking-tight text-[clamp(2.1rem,7vw,5.5rem)] mb-4 sm:mb-6"> Tech<br> Meets Creativity<br> <span class="text-amber-500">and Passion.</span> </h1>
 
             <!-- Subtext -->
             <p
-                class="animate-fade-up-delay-2 text-white/70 text-xs sm:text-base font-sans leading-relaxed max-w-lg mb-8">
+                class="animate-fade-up-delay-2 text-white/80 text-xs sm:text-base font-sans leading-relaxed max-w-lg mb-6 sm:mb-8">
                 We build fierce, highly secure digital identities and full-stack enterprise systems that don't just turn
                 heads — <strong class="text-white">they lead.</strong>
             </p>
 
             <!-- CTA Row -->
-            <div class="animate-fade-up-delay-3 flex flex-wrap items-center gap-4 mb-10 sm:mb-12">
+            <div class="animate-fade-up-delay-3 flex flex-wrap items-center gap-4 mb-8 sm:mb-12">
                 <a href="#work"
                     class="group bg-amber-500 hover:bg-amber-400 text-black px-6 sm:px-8 py-3.5 sm:py-4 rounded-full text-xs font-bold tracking-widest uppercase transition-all duration-300 flex items-center justify-center gap-2 shadow-lg shadow-amber-500/20 w-full sm:w-auto">
                     See Our Work
@@ -298,20 +297,20 @@
             </div>
 
             <!-- Stats Row -->
-            <div class="animate-fade-up-delay-4 grid grid-cols-3 gap-4 sm:gap-12 lg:gap-16 pt-6 border-t border-white/10">
+            <div class="animate-fade-up-delay-4 grid grid-cols-3 gap-3 sm:gap-12 lg:gap-16 pt-5 sm:pt-6 border-t border-white/15">
                 <div>
-                    <div class="font-sans text-white text-xl sm:text-4xl font-bold tracking-tight">40+</div>
-                    <div class="text-white/50 text-[9px] sm:text-xs tracking-widest uppercase mt-1">Systems Shipped
+                    <div class="font-sans text-white text-lg sm:text-4xl font-bold tracking-tight">40+</div>
+                    <div class="text-white/60 text-[8px] sm:text-xs tracking-widest uppercase mt-1">Systems Shipped
                     </div>
                 </div>
                 <div>
-                    <div class="font-sans text-white text-xl sm:text-4xl font-bold tracking-tight">98%</div>
-                    <div class="text-white/50 text-[9px] sm:text-xs tracking-widest uppercase mt-1">Client Retention
+                    <div class="font-sans text-white text-lg sm:text-4xl font-bold tracking-tight">98%</div>
+                    <div class="text-white/60 text-[8px] sm:text-xs tracking-widest uppercase mt-1">Client Retention
                     </div>
                 </div>
                 <div>
-                    <div class="font-sans text-amber-500 text-xl sm:text-4xl font-bold tracking-tight">100%</div>
-                    <div class="text-white/50 text-[9px] sm:text-xs tracking-widest uppercase mt-1">Secure Architecture
+                    <div class="font-sans text-amber-500 text-lg sm:text-4xl font-bold tracking-tight">100%</div>
+                    <div class="text-white/60 text-[8px] sm:text-xs tracking-widest uppercase mt-1">Secure Architecture
                     </div>
                 </div>
             </div>
@@ -319,7 +318,7 @@
     </section>
 
     <!-- SECTION 2: Interactive Spotlight Reveal Hero Section -->
-    <section id="spotlight-interactive" class="relative w-full min-h-[100dvh] flex flex-col justify-between bg-black overflow-hidden py-20 px-4 sm:px-8">
+    <section id="spotlight-interactive" class="relative w-full min-h-[100dvh] h-auto flex flex-col justify-between bg-black overflow-hidden py-24 sm:py-20 px-4 sm:px-8">
         <!-- Base Background Image -->
         <div class="hero-zoom absolute inset-0 bg-center bg-cover bg-no-repeat z-10 opacity-70"
             style="background-image: url('https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260609_195923_b0ba8ace-1d1d-4f2c-9a28-1ab84b330680.png&w=1280&q=85');">
@@ -328,13 +327,13 @@
         <!-- Hidden Canvas & Dynamic Reveal Image Layer -->
         <canvas id="spotlightCanvas" class="absolute inset-0 pointer-events-none hidden md:block"></canvas>
         <div id="revealLayer"
-            class="absolute inset-0 bg-center bg-cover bg-no-repeat z-30 pointer-events-none opacity-90 md:opacity-90 block"
+            class="absolute inset-0 bg-center bg-cover bg-no-repeat z-30 pointer-events-none opacity-90 block"
             style="background-image: url('https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260609_201152_bba90a12-bf12-459f-91f0-51f237dbaf3b.png&w=1280&q=85');">
         </div>
 
         <!-- Overlay Floating Content -->
         <div
-            class="relative sm:absolute sm:top-[14%] left-0 right-0 flex flex-col items-center text-center px-2 sm:px-5 pointer-events-none z-50 mt-8 sm:mt-0">
+            class="relative sm:absolute sm:top-[14%] left-0 right-0 flex flex-col items-center text-center px-2 sm:px-5 pointer-events-none z-50 mb-6 sm:mb-0">
             <h2 class="text-white leading-[0.95]">
                 <span
                     class="block font-playfair italic font-normal text-3xl sm:text-7xl md:text-8xl tracking-[-0.05em] text-white/95">Architecture
@@ -350,7 +349,7 @@
             <!-- Bottom-Left Narrative -->
             <div class="w-full sm:max-w-[280px] pointer-events-auto">
                 <p
-                    class="text-xs text-white/90 leading-relaxed bg-black/60 backdrop-blur-md p-4 rounded-xl border border-white/10 shadow-xl">
+                    class="text-xs text-white/90 leading-relaxed bg-black/70 backdrop-blur-md p-4 rounded-xl border border-white/10 shadow-xl">
                     Every line of code and architectural layout records a chapter of digital evolution, bridging core
                     backend logic with visual elegance.
                 </p>
@@ -360,7 +359,7 @@
             <div
                 class="w-full sm:max-w-[280px] flex flex-col items-start gap-3 pointer-events-auto">
                 <p
-                    class="text-xs text-white/90 leading-relaxed bg-black/60 backdrop-blur-md p-4 rounded-xl border border-white/10 shadow-xl hidden sm:block">
+                    class="text-xs text-white/90 leading-relaxed bg-black/70 backdrop-blur-md p-4 rounded-xl border border-white/10 shadow-xl hidden sm:block">
                     Interactive systems allow you to trace how robust security, predictive analytics, and design combine
                     beneath your application's hood.
                 </p>
