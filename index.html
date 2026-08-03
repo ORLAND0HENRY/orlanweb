@@ -112,39 +112,36 @@
             transition: opacity 0.3s ease, visibility 0.3s ease;
         }
 
-        /* Infinite Auto-Scrolling Orbital Wheel / Marquee */
-        .marquee-container {
-            display: flex;
-            overflow: hidden;
-            width: 100%;
-            position: relative;
-            user-select: none;
-        }
-
-        .marquee-track {
+        /* Interactive & Manual Draggable/Scrollable Orbital Wheel */
+        .orbital-container {
             display: flex;
             gap: 1.5rem;
-            width: max-content;
-            animation: marqueeScroll 35s linear infinite;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: thin;
+            scrollbar-color: #f59e0b rgba(255, 255, 255, 0.1);
+            padding: 1rem 1rem 2rem 1rem;
         }
-
-        .marquee-container:hover .marquee-track {
-            animation-play-state: paused;
+        .orbital-container::-webkit-scrollbar {
+            height: 6px;
         }
-
-        @keyframes marqueeScroll {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(-50%);
-            }
+        .orbital-container::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 9999px;
+        }
+        .orbital-container::-webkit-scrollbar-thumb {
+            background: #f59e0b;
+            border-radius: 9999px;
         }
 
         .orbital-card {
+            scroll-snap-align: center;
             flex: 0 0 280px;
             max-width: 280px;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            user-select: none;
         }
         @media (min-width: 768px) {
             .orbital-card {
@@ -287,42 +284,69 @@
         </div>
     </section>
 
-    <!-- SECTION 3: The Orlantech Story & Narrative (Strict Desktop Two-Column Split: Story Left, Picture Right) -->
-    <section id="story" class="py-16 sm:py-24 px-4 sm:px-8 lg:px-16 bg-white text-obsidian border-b border-obsidian/10">
+    <!-- SECTION 3: The Orlantech Story (Redesigned with Magazine-Grade Editorial Elegance) -->
+    <section id="story" class="py-20 sm:py-32 px-4 sm:px-8 lg:px-16 bg-white text-obsidian border-b border-obsidian/10 relative overflow-hidden">
+        <!-- Subtle Background Accent Overlay -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl pointer-events-none -mr-20 -mt-20"></div>
+
         <div class="max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-                <!-- Left Side: Story & Narrative Content -->
-                <div class="reveal-element space-y-6">
-                    <div>
-                        <span class="text-xs font-bold uppercase tracking-[0.3em] text-amber-600 mb-2 inline-block">The Orlantech Narrative</span>
-                        <h2 class="text-3xl sm:text-5xl font-serif leading-[1.1] tracking-tight">
-                            We started with a simple belief: technology should feel as <span class="italic text-amber-600">natural as breathing.</span>
-                        </h2>
+            <!-- Section Identifier Header -->
+            <div class="reveal-element flex items-center gap-3 mb-10">
+                <span class="w-8 h-[1px] bg-amber-600"></span>
+                <span class="text-xs font-bold uppercase tracking-[0.35em] text-amber-600">The Orlantech Ethos</span>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+                <!-- Left Side: Refined Editorial Narrative (7 Cols) -->
+                <div class="reveal-element lg:col-span-7 space-y-8">
+                    <h2 class="text-3xl sm:text-5xl lg:text-6xl font-serif leading-[1.08] tracking-tight text-obsidian">
+                        Where rigorous security meets <span class="italic text-amber-600 font-normal">uncompromising aesthetic mastery.</span>
+                    </h2>
+
+                    <div class="space-y-5 text-obsidian/80 text-sm sm:text-base font-sans leading-relaxed">
+                        <p class="first-letter:text-5xl first-letter:font-serif first-letter:font-bold first-letter:text-amber-600 first-letter:mr-3 first-letter:float-left">
+                            Rooted in Nairobi, Orlantech Innovations was forged to shatter the monotony of generic templates. We do not merely write backend logic or design layouts; we architect digital ecosystems that command absolute authority and leave lasting impressions.
+                        </p>
+                        <p>
+                            From bulletproof Django backends to immersive, custom-crafted frontend interfaces, every deployment is executed with absolute precision, engineered to scale effortlessly while maintaining a pristine signature brand identity.
+                        </p>
                     </div>
-                    <p class="text-obsidian/75 leading-relaxed text-sm sm:text-base">
-                        Born in Nairobi, Orlantech Innovations was founded to challenge cookie-cutter templates. We engineer uncompromising, secure Django backends fused with bespoke aesthetic interfaces that captivate users and secure enterprises.
-                    </p>
-                    <div class="grid grid-cols-2 gap-6 pt-6 border-t border-obsidian/15">
-                        <div>
-                            <span class="block text-3xl font-serif text-amber-600 mb-1">40+</span>
-                            <span class="text-[10px] font-bold uppercase tracking-widest text-obsidian/60">Engineered Solutions</span>
+
+                    <!-- Core Philosophy Pillars -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6 border-t border-obsidian/15">
+                        <div class="space-y-1">
+                            <span class="text-amber-600 font-serif text-lg font-bold">01. Security</span>
+                            <p class="text-xs text-obsidian/70 leading-normal">Production-ready, impenetrable architectures built for enterprise reliability.</p>
                         </div>
-                        <div>
-                            <span class="block text-3xl font-serif text-amber-600 mb-1">98%</span>
-                            <span class="text-[10px] font-bold uppercase tracking-widest text-obsidian/60">Client Trust Score</span>
+                        <div class="space-y-1">
+                            <span class="text-amber-600 font-serif text-lg font-bold">02. Aesthetics</span>
+                            <p class="text-xs text-obsidian/70 leading-normal">High-end visual uniqueness designed for ultimate brand distinction.</p>
+                        </div>
+                        <div class="space-y-1">
+                            <span class="text-amber-600 font-serif text-lg font-bold">03. Craft</span>
+                            <p class="text-xs text-obsidian/70 leading-normal">Original code structures optimized for flawless cross-device responsiveness.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Right Side: Dedicated Picture Frame -->
-                <div class="reveal-element">
-                    <div class="aspect-[4/5] bg-obsidian rounded-3xl overflow-hidden shadow-2xl relative border-4 border-obsidian/5">
-                        <img src="Grain Texture Impressionistic Weathered Frame Dust Particles And Textures Backgrounds _ JPG Free Download - Pikbest.jpeg"
-                            class="w-full h-full object-cover scale-105 hover:scale-100 transition-transform duration-700" alt="Orlantech Story Visual">
-                        <div class="absolute inset-0 bg-gradient-to-t from-obsidian/60 via-transparent to-transparent flex items-end p-6">
-                            <span class="text-white text-xs font-medium tracking-wider bg-black/50 backdrop-blur-md px-4 py-2 rounded-full border border-white/15">
-                                Nairobi Design Lab • Est. 2026
-                            </span>
+                <!-- Right Side: Luxury Framed Visual (5 Cols) -->
+                <div class="reveal-element lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <!-- Decorative Backplate Frame -->
+                        <div class="absolute inset-0 border-2 border-amber-600/30 rounded-3xl translate-x-4 translate-y-4 -z-10 hidden sm:block"></div>
+                        
+                        <div class="aspect-[4/5] bg-obsidian rounded-3xl overflow-hidden shadow-2xl relative border border-obsidian/10">
+                            <img src="Grain Texture Impressionistic Weathered Frame Dust Particles And Textures Backgrounds _ JPG Free Download - Pikbest.jpeg"
+                                class="w-full h-full object-cover scale-105 hover:scale-100 transition-transform duration-700 opacity-90" alt="Orlantech Craft Studio">
+                            
+                            <!-- Floating Glass Badge -->
+                            <div class="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-black/75 backdrop-blur-md border border-white/15 flex items-center justify-between">
+                                <div>
+                                    <span class="block text-white font-serif text-sm">Nairobi Design Lab</span>
+                                    <span class="text-[10px] uppercase tracking-widest text-amber-400">Flagship Studio • 2026</span>
+                                </div>
+                                <span class="w-2.5 h-2.5 rounded-full bg-amber-500 animate-ping"></span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -330,9 +354,9 @@
         </div>
     </section>
 
-    <!-- SECTION 4: Work & Selected Archive with Automatic Infinite Orbital Marquee Wheel -->
+    <!-- SECTION 4: Work & Selected Archive with Fully Interactive Manual / Scrollable Orbital Wheel -->
     <section id="work" class="py-16 sm:py-24 px-0 bg-obsidian text-parchment rounded-t-[2.5rem] overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-8 mb-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 mb-8">
             <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
                 <div>
                     <h2 class="text-3xl sm:text-5xl font-serif mb-2 tracking-tight">Selected Archive</h2>
@@ -340,18 +364,19 @@
                 </div>
                 <div class="text-amber-500 text-xs font-bold uppercase tracking-[0.2em] flex items-center gap-2 bg-white/5 px-4 py-2 rounded-full border border-white/10">
                     <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
-                    Auto-Scrolling Orbital Wheel &bull; Hover to Pause
+                    Scroll, Drag or Swipe Wheel to Navigate &harr;
                 </div>
             </div>
         </div>
 
-        <!-- Automatic Infinite Marquee Wheel -->
-        <div class="marquee-container py-4">
-            <div class="marquee-track">
-                <!-- First Set of Projects -->
+        <!-- Fully Interactive Manual & Scrollable Orbital Wheel -->
+        <div class="relative w-full">
+            <div id="orbitalWheel" class="orbital-container px-4 sm:px-12">
+                
+                <!-- Orbital Card 1 -->
                 <a href="https://orlando.pythonanywhere.com" target="_blank" rel="noopener noreferrer" class="orbital-card group block shrink-0">
                     <div class="aspect-[4/5] bg-neutral-900 rounded-t-[120px] rounded-b-2xl overflow-hidden relative border border-white/15 shadow-2xl mb-3">
-                        <img src="pendo.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Pendo Management">
+                        <img src="pendo.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Pendo Management" draggable="false">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
                             <span class="border border-amber-500 text-amber-400 px-3 py-1.5 rounded-full uppercase text-[10px] tracking-widest bg-black/70 backdrop-blur-md font-semibold">Explore App &rarr;</span>
                         </div>
@@ -360,9 +385,10 @@
                     <p class="text-parchment/60 text-xs mt-1">Modern educational ecosystem with smart role tracking.</p>
                 </a>
 
+                <!-- Orbital Card 2 -->
                 <a href="https://kangemiambassadors.pythonanywhere.com" target="_blank" rel="noopener noreferrer" class="orbital-card group block shrink-0">
                     <div class="aspect-[4/5] bg-neutral-900 rounded-t-[120px] rounded-b-2xl overflow-hidden relative border border-white/15 shadow-2xl mb-3">
-                        <img src="chrch.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Church Web App">
+                        <img src="chrch.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Church Web App" draggable="false">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
                             <span class="border border-amber-500 text-amber-400 px-3 py-1.5 rounded-full uppercase text-[10px] tracking-widest bg-black/70 backdrop-blur-md font-semibold">Explore App &rarr;</span>
                         </div>
@@ -371,9 +397,10 @@
                     <p class="text-parchment/60 text-xs mt-1">Community platform with real-time M-Pesa STK Push.</p>
                 </a>
 
+                <!-- Orbital Card 3 -->
                 <a href="https://littlebox.pythonanywhere.com" target="_blank" rel="noopener noreferrer" class="orbital-card group block shrink-0">
                     <div class="aspect-[4/5] bg-neutral-900 rounded-t-[120px] rounded-b-2xl overflow-hidden relative border border-white/15 shadow-2xl mb-3">
-                        <img src="littlebox.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Little Box Foundation">
+                        <img src="littlebox.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Little Box Foundation" draggable="false">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
                             <span class="border border-amber-500 text-amber-400 px-3 py-1.5 rounded-full uppercase text-[10px] tracking-widest bg-black/70 backdrop-blur-md font-semibold">Explore App &rarr;</span>
                         </div>
@@ -382,9 +409,10 @@
                     <p class="text-parchment/60 text-xs mt-1">Social impact and outreach engagement platform.</p>
                 </a>
 
+                <!-- Orbital Card 4 -->
                 <a href="https://websentinel.pythonanywhere.com" target="_blank" rel="noopener noreferrer" class="orbital-card group block shrink-0">
                     <div class="aspect-[4/5] bg-neutral-900 rounded-t-[120px] rounded-b-2xl overflow-hidden relative border border-white/15 shadow-2xl mb-3">
-                        <img src="landing page.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Urban Palate">
+                        <img src="landing page.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Urban Palate" draggable="false">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
                             <span class="border border-amber-500 text-amber-400 px-3 py-1.5 rounded-full uppercase text-[10px] tracking-widest bg-black/70 backdrop-blur-md font-semibold">Explore App &rarr;</span>
                         </div>
@@ -393,9 +421,10 @@
                     <p class="text-parchment/60 text-xs mt-1">Premium UI/UX design architecture for culinary industry.</p>
                 </a>
 
+                <!-- Orbital Card 5 -->
                 <a href="https://nailsbykate.pythonanywhere.com" target="_blank" rel="noopener noreferrer" class="orbital-card group block shrink-0">
                     <div class="aspect-[4/5] bg-neutral-900 rounded-t-[120px] rounded-b-2xl overflow-hidden relative border border-white/15 shadow-2xl mb-3">
-                        <img src="nails.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Nails Website">
+                        <img src="nails.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Nails Website" draggable="false">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
                             <span class="border border-amber-500 text-amber-400 px-3 py-1.5 rounded-full uppercase text-[10px] tracking-widest bg-black/70 backdrop-blur-md font-semibold">Explore App &rarr;</span>
                         </div>
@@ -404,9 +433,10 @@
                     <p class="text-parchment/60 text-xs mt-1">Elegant service portfolio and booking interface.</p>
                 </a>
 
+                <!-- Orbital Card 6 -->
                 <a href="https://orlantechinnovations.pythonanywhere.com" target="_blank" rel="noopener noreferrer" class="orbital-card group block shrink-0">
                     <div class="aspect-[4/5] bg-neutral-900 rounded-t-[120px] rounded-b-2xl overflow-hidden relative border border-white/15 shadow-2xl mb-3">
-                        <img src="ironclad.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Ironclad Gear">
+                        <img src="ironclad.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Ironclad Gear" draggable="false">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
                             <span class="border border-amber-500 text-amber-400 px-3 py-1.5 rounded-full uppercase text-[10px] tracking-widest bg-black/70 backdrop-blur-md font-semibold">Explore App &rarr;</span>
                         </div>
@@ -415,72 +445,13 @@
                     <p class="text-parchment/60 text-xs mt-1">High-security e-commerce store for tactical gear.</p>
                 </a>
 
-                <!-- Duplicate Set for Seamless Infinite Loop -->
-                <a href="https://orlando.pythonanywhere.com" target="_blank" rel="noopener noreferrer" class="orbital-card group block shrink-0">
-                    <div class="aspect-[4/5] bg-neutral-900 rounded-t-[120px] rounded-b-2xl overflow-hidden relative border border-white/15 shadow-2xl mb-3">
-                        <img src="pendo.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Pendo Management">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
-                            <span class="border border-amber-500 text-amber-400 px-3 py-1.5 rounded-full uppercase text-[10px] tracking-widest bg-black/70 backdrop-blur-md font-semibold">Explore App &rarr;</span>
-                        </div>
-                    </div>
-                    <h3 class="text-lg font-serif group-hover:text-amber-500 transition-colors">Pendo Management</h3>
-                    <p class="text-parchment/60 text-xs mt-1">Modern educational ecosystem with smart role tracking.</p>
-                </a>
+            </div>
 
-                <a href="https://kangemiambassadors.pythonanywhere.com" target="_blank" rel="noopener noreferrer" class="orbital-card group block shrink-0">
-                    <div class="aspect-[4/5] bg-neutral-900 rounded-t-[120px] rounded-b-2xl overflow-hidden relative border border-white/15 shadow-2xl mb-3">
-                        <img src="chrch.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Church Web App">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
-                            <span class="border border-amber-500 text-amber-400 px-3 py-1.5 rounded-full uppercase text-[10px] tracking-widest bg-black/70 backdrop-blur-md font-semibold">Explore App &rarr;</span>
-                        </div>
-                    </div>
-                    <h3 class="text-lg font-serif group-hover:text-amber-500 transition-colors">Church Web App</h3>
-                    <p class="text-parchment/60 text-xs mt-1">Community platform with real-time M-Pesa STK Push.</p>
-                </a>
-
-                <a href="https://littlebox.pythonanywhere.com" target="_blank" rel="noopener noreferrer" class="orbital-card group block shrink-0">
-                    <div class="aspect-[4/5] bg-neutral-900 rounded-t-[120px] rounded-b-2xl overflow-hidden relative border border-white/15 shadow-2xl mb-3">
-                        <img src="littlebox.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Little Box Foundation">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
-                            <span class="border border-amber-500 text-amber-400 px-3 py-1.5 rounded-full uppercase text-[10px] tracking-widest bg-black/70 backdrop-blur-md font-semibold">Explore App &rarr;</span>
-                        </div>
-                    </div>
-                    <h3 class="text-lg font-serif group-hover:text-amber-500 transition-colors">LittleBox Foundation</h3>
-                    <p class="text-parchment/60 text-xs mt-1">Social impact and outreach engagement platform.</p>
-                </a>
-
-                <a href="https://websentinel.pythonanywhere.com" target="_blank" rel="noopener noreferrer" class="orbital-card group block shrink-0">
-                    <div class="aspect-[4/5] bg-neutral-900 rounded-t-[120px] rounded-b-2xl overflow-hidden relative border border-white/15 shadow-2xl mb-3">
-                        <img src="landing page.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Urban Palate">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
-                            <span class="border border-amber-500 text-amber-400 px-3 py-1.5 rounded-full uppercase text-[10px] tracking-widest bg-black/70 backdrop-blur-md font-semibold">Explore App &rarr;</span>
-                        </div>
-                    </div>
-                    <h3 class="text-lg font-serif group-hover:text-amber-500 transition-colors">Urban Palate</h3>
-                    <p class="text-parchment/60 text-xs mt-1">Premium UI/UX design architecture for culinary industry.</p>
-                </a>
-
-                <a href="https://nailsbykate.pythonanywhere.com" target="_blank" rel="noopener noreferrer" class="orbital-card group block shrink-0">
-                    <div class="aspect-[4/5] bg-neutral-900 rounded-t-[120px] rounded-b-2xl overflow-hidden relative border border-white/15 shadow-2xl mb-3">
-                        <img src="nails.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Nails Website">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
-                            <span class="border border-amber-500 text-amber-400 px-3 py-1.5 rounded-full uppercase text-[10px] tracking-widest bg-black/70 backdrop-blur-md font-semibold">Explore App &rarr;</span>
-                        </div>
-                    </div>
-                    <h3 class="text-lg font-serif group-hover:text-amber-500 transition-colors">Nails Website</h3>
-                    <p class="text-parchment/60 text-xs mt-1">Elegant service portfolio and booking interface.</p>
-                </a>
-
-                <a href="https://orlantechinnovations.pythonanywhere.com" target="_blank" rel="noopener noreferrer" class="orbital-card group block shrink-0">
-                    <div class="aspect-[4/5] bg-neutral-900 rounded-t-[120px] rounded-b-2xl overflow-hidden relative border border-white/15 shadow-2xl mb-3">
-                        <img src="ironclad.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Ironclad Gear">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
-                            <span class="border border-amber-500 text-amber-400 px-3 py-1.5 rounded-full uppercase text-[10px] tracking-widest bg-black/70 backdrop-blur-md font-semibold">Explore App &rarr;</span>
-                        </div>
-                    </div>
-                    <h3 class="text-lg font-serif group-hover:text-amber-500 transition-colors">Ironclad Gear</h3>
-                    <p class="text-parchment/60 text-xs mt-1">High-security e-commerce store for tactical gear.</p>
-                </a>
+            <!-- Navigation Controls Hint / Buttons -->
+            <div class="flex justify-center items-center gap-4 mt-6">
+                <button onclick="scrollWheel(-1)" class="w-10 h-10 rounded-full border border-white/20 bg-white/5 hover:bg-amber-500 hover:text-black hover:border-amber-500 flex items-center justify-center transition-all" aria-label="Scroll Left">&larr;</button>
+                <span class="text-xs uppercase tracking-widest text-white/50">Drag or Click Arrows</span>
+                <button onclick="scrollWheel(1)" class="w-10 h-10 rounded-full border border-white/20 bg-white/5 hover:bg-amber-500 hover:text-black hover:border-amber-500 flex items-center justify-center transition-all" aria-label="Scroll Right">&rarr;</button>
             </div>
         </div>
     </section>
@@ -582,6 +553,45 @@
             }
         }
 
+        // Smooth Manual Wheel Controller
+        function scrollWheel(direction) {
+            const container = document.getElementById('orbitalWheel');
+            const scrollAmount = 340 * direction;
+            container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        }
+
+        // Enable Drag-to-Scroll for Orbital Wheel
+        const slider = document.getElementById('orbitalWheel');
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        slider.addEventListener('mousedown', (e) => {
+            isDown = true;
+            slider.classList.add('cursor-grabbing');
+            startX = e.pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+        });
+
+        slider.addEventListener('mouseleave', () => {
+            isDown = false;
+            slider.classList.remove('cursor-grabbing');
+        });
+
+        slider.addEventListener('mouseup', () => {
+            isDown = false;
+            slider.classList.remove('cursor-grabbing');
+        });
+
+        slider.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - slider.offsetLeft;
+            const walk = (x - startX) * 2; // Scroll speed multiplier
+            slider.scrollLeft = scrollLeft - walk;
+        });
+
+        // Intersection Observer for Reveal Animations
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) entry.target.classList.add('active');
