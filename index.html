@@ -164,14 +164,14 @@
 
     <!-- Fixed Header Navigation Bar -->
     <nav
-        class="fixed top-0 left-0 right-0 z-[100] flex items-center justify-between px-6 sm:px-10 lg:px-16 py-5 lg:py-7 backdrop-blur-md bg-black/20 border-b border-white/10 transition-all duration-300">
+        class="fixed top-0 left-0 right-0 z-[100] flex items-center justify-between px-4 sm:px-8 lg:px-16 py-4 sm:py-6 backdrop-blur-md bg-black/40 border-b border-white/10 transition-all duration-300">
         <!-- Brand Wordmark -->
-        <a href="#" class="flex items-center gap-3 group">
-            <svg class="w-6 h-6 fill-amber-500 group-hover:rotate-12 transition-transform duration-300"
+        <a href="#" class="flex items-center gap-2 sm:gap-3 group">
+            <svg class="w-5 h-5 sm:w-6 sm:h-6 fill-amber-500 group-hover:rotate-12 transition-transform duration-300 shrink-0"
                 viewBox="0 0 256 256">
                 <path d="M 256 256 L 128 256 L 0 128 L 128 128 Z M 256 128 L 128 128 L 0 0 L 128 0 Z" />
             </svg>
-            <span class="text-white text-xl sm:text-2xl font-podium uppercase tracking-wider">ORLANTECH <span
+            <span class="text-white text-base sm:text-xl md:text-2xl font-podium uppercase tracking-wider truncate">ORLANTECH <span
                     class="text-amber-500">INNOVATIONS</span></span>
         </a>
 
@@ -203,47 +203,47 @@
         </div>
 
         <!-- Mobile Hamburger -->
-        <button onclick="toggleMobileMenu(true)" class="md:hidden flex flex-col space-y-1.5 p-2 focus:outline-none"
+        <button onclick="toggleMobileMenu(true)" class="md:hidden flex flex-col justify-center items-center w-10 h-10 space-y-1.5 p-2 focus:outline-none bg-white/5 rounded-lg border border-white/10"
             aria-label="Open Menu">
-            <span class="w-6 h-0.5 bg-white"></span>
-            <span class="w-6 h-0.5 bg-white"></span>
-            <span class="w-4 h-0.5 bg-amber-500"></span>
+            <span class="w-5 h-0.5 bg-white rounded-full"></span>
+            <span class="w-5 h-0.5 bg-white rounded-full"></span>
+            <span class="w-3.5 h-0.5 bg-amber-500 rounded-full self-start ml-0.5"></span>
         </button>
     </nav>
 
     <!-- Fullscreen Mobile Menu Overlay -->
     <div id="mobile-menu"
-        class="fixed inset-0 z-[150] bg-black/95 backdrop-blur-md opacity-0 invisible flex flex-col justify-between p-8 sm:p-12">
-        <div class="flex justify-between items-center">
-            <span class="text-white font-podium text-xl tracking-wider">ORLANTECH</span>
-            <button onclick="toggleMobileMenu(false)" class="text-white hover:text-amber-500 p-2 text-2xl"
+        class="fixed inset-0 z-[150] bg-black/98 backdrop-blur-xl opacity-0 invisible flex flex-col justify-between p-6 sm:p-12 transition-all">
+        <div class="flex justify-between items-center w-full">
+            <span class="text-white font-podium text-lg sm:text-xl tracking-wider">ORLANTECH <span class="text-amber-500">INNOVATIONS</span></span>
+            <button onclick="toggleMobileMenu(false)" class="text-white hover:text-amber-500 p-2 text-2xl w-10 h-10 flex items-center justify-center rounded-full bg-white/10"
                 aria-label="Close Menu">✕</button>
         </div>
 
-        <div class="flex flex-col items-center space-y-8 my-auto">
+        <div class="flex flex-col items-center justify-center space-y-6 my-auto text-center w-full">
             <a href="#hero-video" onclick="toggleMobileMenu(false)"
-                class="font-podium text-3xl sm:text-4xl text-white uppercase tracking-wider hover:text-amber-500 transition-colors">Home</a>
+                class="font-podium text-2xl sm:text-3xl text-white uppercase tracking-wider hover:text-amber-500 transition-colors">Home</a>
             <a href="#spotlight-interactive" onclick="toggleMobileMenu(false)"
-                class="font-podium text-3xl sm:text-4xl text-white uppercase tracking-wider hover:text-amber-500 transition-colors">Core
+                class="font-podium text-2xl sm:text-3xl text-white uppercase tracking-wider hover:text-amber-500 transition-colors">Core
                 Systems</a>
             <a href="#work" onclick="toggleMobileMenu(false)"
-                class="font-podium text-3xl sm:text-4xl text-white uppercase tracking-wider hover:text-amber-500 transition-colors">Archive</a>
+                class="font-podium text-2xl sm:text-3xl text-white uppercase tracking-wider hover:text-amber-500 transition-colors">Archive</a>
             <a href="#story" onclick="toggleMobileMenu(false)"
-                class="font-podium text-3xl sm:text-4xl text-white uppercase tracking-wider hover:text-amber-500 transition-colors">Our
+                class="font-podium text-2xl sm:text-3xl text-white uppercase tracking-wider hover:text-amber-500 transition-colors">Our
                 Story</a>
             <a href="#contact" onclick="toggleMobileMenu(false)"
-                class="mt-4 border border-amber-500 text-amber-500 px-8 py-3 rounded-full text-xs tracking-widest uppercase font-semibold">Get
+                class="mt-4 border border-amber-500 bg-amber-500/10 text-amber-500 px-8 py-3.5 rounded-full text-xs tracking-widest uppercase font-semibold w-full max-w-xs shadow-lg shadow-amber-500/10">Get
                 In Touch</a>
         </div>
 
-        <div class="text-center text-xs text-white/40 tracking-widest uppercase">
-            Nairobi, Kenya • Est. 2024
+        <div class="text-center text-[10px] text-white/40 tracking-widest uppercase pb-4">
+            Nairobi, Kenya • Est. 2026
         </div>
     </div>
 
     <!-- SECTION 1: Vanguard Fullscreen Video Hero -->
     <section id="hero-video"
-        class="relative w-full h-screen min-h-[100dvh] flex items-center justify-start px-6 sm:px-10 lg:px-16 overflow-hidden">
+        class="relative w-full min-h-[100dvh] flex items-center justify-start px-4 sm:px-8 lg:px-16 py-24 sm:py-28 overflow-hidden">
         <!-- Background Video -->
         <video autoPlay muted loop playsInline class="absolute inset-0 w-full h-full object-cover -z-20">
             <source
@@ -252,32 +252,32 @@
         </video>
 
         <!-- Overlay Gradients for Depth & Legibility -->
-        <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent -z-10"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-black/95 via-black/70 to-black/30 sm:to-transparent -z-10"></div>
         <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-black/40 -z-10"></div>
 
         <!-- Content Overlay -->
-        <div class="max-w-4xl pt-16 z-10">
+        <div class="w-full max-w-4xl z-10 my-auto">
             <!-- Tagline -->
-            <div class="animate-fade-up flex items-center gap-3 mb-6 lg:mb-8">
-                <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
-                <span class="text-white/70 text-xs sm:text-sm font-sans tracking-[0.3em] uppercase">World-Class Digital
+            <div class="animate-fade-up flex items-center gap-3 mb-4 sm:mb-6">
+                <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse shrink-0"></span>
+                <span class="text-white/70 text-[10px] sm:text-xs font-sans tracking-[0.25em] sm:tracking-[0.3em] uppercase">World-Class Digital
                     Collective</span>
             </div>
 
             <!-- Main Heading -->
-            <h1 class="animate-fade-up-delay-1 font-podium text-white uppercase leading-[0.92] tracking-tight text-[clamp(2.4rem,7vw,5.5rem)] mb-6"> Tech<br> Meets Creativity<br> <span class="text-amber-500">and Passion.</span> </h1>
+            <h1 class="animate-fade-up-delay-1 font-podium text-white uppercase leading-[0.95] sm:leading-[0.92] tracking-tight text-[clamp(2.2rem,7vw,5.5rem)] mb-6"> Tech<br> Meets Creativity<br> <span class="text-amber-500">and Passion.</span> </h1>
 
             <!-- Subtext -->
             <p
-                class="animate-fade-up-delay-2 text-white/70 text-sm sm:text-base font-sans leading-relaxed max-w-md mb-8">
+                class="animate-fade-up-delay-2 text-white/70 text-xs sm:text-base font-sans leading-relaxed max-w-lg mb-8">
                 We build fierce, highly secure digital identities and full-stack enterprise systems that don't just turn
                 heads — <strong class="text-white">they lead.</strong>
             </p>
 
             <!-- CTA Row -->
-            <div class="animate-fade-up-delay-3 flex flex-wrap items-center gap-4 sm:gap-6 mb-12">
+            <div class="animate-fade-up-delay-3 flex flex-wrap items-center gap-4 mb-10 sm:mb-12">
                 <a href="#work"
-                    class="group bg-amber-500 hover:bg-amber-400 text-black px-6 sm:px-8 py-3.5 sm:py-4 rounded-full text-xs font-bold tracking-widest uppercase transition-all duration-300 flex items-center gap-2">
+                    class="group bg-amber-500 hover:bg-amber-400 text-black px-6 sm:px-8 py-3.5 sm:py-4 rounded-full text-xs font-bold tracking-widest uppercase transition-all duration-300 flex items-center justify-center gap-2 shadow-lg shadow-amber-500/20 w-full sm:w-auto">
                     See Our Work
                     <svg class="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
                         fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -298,19 +298,19 @@
             </div>
 
             <!-- Stats Row -->
-            <div class="animate-fade-up-delay-4 flex flex-wrap gap-6 sm:gap-12 lg:gap-16 pt-6 border-t border-white/10">
+            <div class="animate-fade-up-delay-4 grid grid-cols-3 gap-4 sm:gap-12 lg:gap-16 pt-6 border-t border-white/10">
                 <div>
-                    <div class="font-sans text-white text-2xl sm:text-4xl font-bold tracking-tight">40+</div>
+                    <div class="font-sans text-white text-xl sm:text-4xl font-bold tracking-tight">40+</div>
                     <div class="text-white/50 text-[9px] sm:text-xs tracking-widest uppercase mt-1">Systems Shipped
                     </div>
                 </div>
                 <div>
-                    <div class="font-sans text-white text-2xl sm:text-4xl font-bold tracking-tight">98%</div>
+                    <div class="font-sans text-white text-xl sm:text-4xl font-bold tracking-tight">98%</div>
                     <div class="text-white/50 text-[9px] sm:text-xs tracking-widest uppercase mt-1">Client Retention
                     </div>
                 </div>
                 <div>
-                    <div class="font-sans text-amber-500 text-2xl sm:text-4xl font-bold tracking-tight">100%</div>
+                    <div class="font-sans text-amber-500 text-xl sm:text-4xl font-bold tracking-tight">100%</div>
                     <div class="text-white/50 text-[9px] sm:text-xs tracking-widest uppercase mt-1">Secure Architecture
                     </div>
                 </div>
@@ -319,68 +319,71 @@
     </section>
 
     <!-- SECTION 2: Interactive Spotlight Reveal Hero Section -->
-    <section id="spotlight-interactive" class="relative w-full h-screen min-h-[100dvh] bg-black overflow-hidden">
+    <section id="spotlight-interactive" class="relative w-full min-h-[100dvh] flex flex-col justify-between bg-black overflow-hidden py-20 px-4 sm:px-8">
         <!-- Base Background Image -->
         <div class="hero-zoom absolute inset-0 bg-center bg-cover bg-no-repeat z-10 opacity-70"
             style="background-image: url('https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260609_195923_b0ba8ace-1d1d-4f2c-9a28-1ab84b330680.png&w=1280&q=85');">
         </div>
 
         <!-- Hidden Canvas & Dynamic Reveal Image Layer -->
-        <canvas id="spotlightCanvas" class="absolute inset-0 pointer-events-none hidden"></canvas>
+        <canvas id="spotlightCanvas" class="absolute inset-0 pointer-events-none hidden md:block"></canvas>
         <div id="revealLayer"
-            class="absolute inset-0 bg-center bg-cover bg-no-repeat z-30 pointer-events-none opacity-90"
+            class="absolute inset-0 bg-center bg-cover bg-no-repeat z-30 pointer-events-none opacity-90 md:opacity-90 block"
             style="background-image: url('https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260609_201152_bba90a12-bf12-459f-91f0-51f237dbaf3b.png&w=1280&q=85');">
         </div>
 
         <!-- Overlay Floating Content -->
         <div
-            class="absolute top-[14%] left-0 right-0 flex flex-col items-center text-center px-5 pointer-events-none z-50">
+            class="relative sm:absolute sm:top-[14%] left-0 right-0 flex flex-col items-center text-center px-2 sm:px-5 pointer-events-none z-50 mt-8 sm:mt-0">
             <h2 class="text-white leading-[0.95]">
                 <span
-                    class="block font-playfair italic font-normal text-4xl sm:text-7xl md:text-8xl tracking-[-0.05em] text-white/90">Architecture
+                    class="block font-playfair italic font-normal text-3xl sm:text-7xl md:text-8xl tracking-[-0.05em] text-white/95">Architecture
                     holds</span>
                 <span
-                    class="block font-sans font-bold text-4xl sm:text-7xl md:text-8xl -mt-1 tracking-[-0.08em] text-amber-500">tales
+                    class="block font-sans font-bold text-3xl sm:text-7xl md:text-8xl -mt-1 tracking-[-0.08em] text-amber-500">tales
                     of innovation</span>
             </h2>
         </div>
 
-        <!-- Bottom-Left Narrative -->
-        <div class="hidden sm:block absolute bottom-14 left-10 md:left-14 max-w-[280px] z-50 pointer-events-none">
-            <p
-                class="text-xs sm:text-sm text-white/80 leading-relaxed bg-black/40 backdrop-blur-md p-4 rounded-xl border border-white/10">
-                Every line of code and architectural layout records a chapter of digital evolution, bridging core
-                backend logic with visual elegance.
-            </p>
-        </div>
+        <!-- Mobile & Desktop Bottom Container Wrapper -->
+        <div class="relative sm:absolute bottom-6 sm:bottom-12 left-4 right-4 sm:left-10 sm:right-10 flex flex-col sm:flex-row justify-between items-end gap-4 z-50 mt-auto">
+            <!-- Bottom-Left Narrative -->
+            <div class="w-full sm:max-w-[280px] pointer-events-auto">
+                <p
+                    class="text-xs text-white/90 leading-relaxed bg-black/60 backdrop-blur-md p-4 rounded-xl border border-white/10 shadow-xl">
+                    Every line of code and architectural layout records a chapter of digital evolution, bridging core
+                    backend logic with visual elegance.
+                </p>
+            </div>
 
-        <!-- Bottom-Right Interactive CTA -->
-        <div
-            class="absolute bottom-10 sm:bottom-24 left-5 right-5 sm:left-auto sm:right-10 md:right-14 max-w-full sm:max-w-[280px] flex flex-col items-start gap-4 z-50">
-            <p
-                class="text-xs sm:text-sm text-white/80 leading-relaxed bg-black/40 backdrop-blur-md p-4 rounded-xl border border-white/10">
-                Interactive systems allow you to trace how robust security, predictive analytics, and design combine
-                beneath your application's hood.
-            </p>
-            <a href="#story"
-                class="w-full sm:w-auto text-center bg-amber-500 hover:bg-amber-400 text-black text-xs font-bold uppercase tracking-widest px-7 py-3.5 rounded-full transition-all hover:scale-[1.03] active:scale-95 shadow-lg shadow-amber-500/20">
-                Discover Our Craft
-            </a>
+            <!-- Bottom-Right Interactive CTA -->
+            <div
+                class="w-full sm:max-w-[280px] flex flex-col items-start gap-3 pointer-events-auto">
+                <p
+                    class="text-xs text-white/90 leading-relaxed bg-black/60 backdrop-blur-md p-4 rounded-xl border border-white/10 shadow-xl hidden sm:block">
+                    Interactive systems allow you to trace how robust security, predictive analytics, and design combine
+                    beneath your application's hood.
+                </p>
+                <a href="#story"
+                    class="w-full text-center bg-amber-500 hover:bg-amber-400 text-black text-xs font-bold uppercase tracking-widest px-7 py-3.5 rounded-full transition-all hover:scale-[1.03] active:scale-95 shadow-lg shadow-amber-500/20">
+                    Discover Our Craft
+                </a>
+            </div>
         </div>
     </section>
 
     <!-- SECTION 3: The Orlantech Story & Narrative -->
-    <section id="story" class="py-24 px-6 md:px-12 bg-white text-obsidian border-y border-obsidian/5 overflow-hidden">
+    <section id="story" class="py-20 sm:py-24 px-4 sm:px-8 md:px-12 bg-white text-obsidian border-y border-obsidian/5 overflow-hidden">
         <div class="max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
                 <div class="reveal-element">
-                    <h2 class="text-xs font-bold uppercase tracking-[0.4em] text-amber-500 mb-4">The Orlantech Narrative
+                    <h2 class="text-xs font-bold uppercase tracking-[0.4em] text-amber-500 mb-3 sm:mb-4">The Orlantech Narrative
                     </h2>
-                    <h3 class="text-4xl md:text-5xl font-serif leading-tight mb-8">
+                    <h3 class="text-3xl sm:text-4xl md:text-5xl font-serif leading-tight mb-6 sm:mb-8">
                         We started with a simple belief: technology should feel as <span
                             class="italic text-amber-500">natural as breathing.</span>
                     </h3>
-                    <div class="space-y-6 text-obsidian/70 leading-relaxed font-light text-sm md:text-base">
+                    <div class="space-y-4 sm:space-y-6 text-obsidian/75 leading-relaxed font-light text-xs sm:text-base">
                         <p>
                             Born in the vibrant tech landscape of Nairobi, Orlantech Innovations was founded to
                             challenge cold, cookie-cutter templates. We saw a software world full of plain tools and
@@ -392,14 +395,14 @@
                         </p>
                     </div>
 
-                    <div class="mt-12 grid grid-cols-2 gap-8 pt-8 border-t border-obsidian/10">
+                    <div class="mt-8 sm:mt-12 grid grid-cols-2 gap-6 sm:gap-8 pt-6 sm:pt-8 border-t border-obsidian/10">
                         <div>
-                            <span class="block text-3xl font-serif text-amber-500 mb-1">40+</span>
+                            <span class="block text-2xl sm:text-3xl font-serif text-amber-500 mb-1">40+</span>
                             <span class="text-[10px] font-bold uppercase tracking-widest text-obsidian/50">Engineered
                                 Solutions</span>
                         </div>
                         <div>
-                            <span class="block text-3xl font-serif text-amber-500 mb-1">98%</span>
+                            <span class="block text-2xl sm:text-3xl font-serif text-amber-500 mb-1">98%</span>
                             <span class="text-[10px] font-bold uppercase tracking-widest text-obsidian/50">Client
                                 Trust</span>
                         </div>
@@ -407,14 +410,14 @@
                 </div>
 
                 <div class="reveal-element relative">
-                    <div class="aspect-[4/5] bg-obsidian rounded-3xl overflow-hidden shadow-2xl relative group">
+                    <div class="aspect-[4/5] bg-obsidian rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl relative group">
                         <img src="Grain Texture Impressionistic Weathered Frame Dust Particles And Textures Backgrounds _ JPG Free Download - Pikbest.jpeg"
                             class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700"
                             alt="Orlantech Frame">
                         <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent flex flex-col justify-end p-8 text-white">
-                            <span class="text-5xl font-serif italic text-amber-500 mb-2">O.</span>
-                            <p class="text-xs font-bold uppercase tracking-[0.3em] text-white/70">Nairobi Headquarters
+                            class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent flex flex-col justify-end p-6 sm:p-8 text-white">
+                            <span class="text-4xl sm:text-5xl font-serif italic text-amber-500 mb-1 sm:mb-2">O.</span>
+                            <p class="text-[10px] sm:text-xs font-bold uppercase tracking-[0.3em] text-white/70">Nairobi Headquarters
                             </p>
                         </div>
                     </div>
@@ -425,12 +428,12 @@
 
     <!-- SECTION 4: Work & Selected Archive -->
     <section id="work"
-        class="py-16 md:py-24 px-4 sm:px-6 md:px-12 bg-obsidian text-parchment rounded-t-[2.5rem] md:rounded-t-[4rem] overflow-hidden">
+        class="py-16 md:py-24 px-4 sm:px-6 md:px-12 bg-obsidian text-parchment rounded-t-[2rem] sm:rounded-t-[3rem] md:rounded-t-[4rem] overflow-hidden">
         <div class="max-w-7xl mx-auto">
-            <header class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 sm:mb-16 gap-4">
+            <header class="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 sm:mb-16 gap-4">
                 <div>
                     <h2 class="text-3xl sm:text-5xl md:text-6xl font-serif mb-2 tracking-tight">Selected Archive</h2>
-                    <p class="text-parchment/40 text-[10px] md:text-xs uppercase tracking-[0.2em] font-semibold italic">
+                    <p class="text-parchment/50 text-[10px] md:text-xs uppercase tracking-[0.2em] font-semibold italic">
                         Curated Works 2024 — 2026</p>
                 </div>
                 <div class="hidden md:block">
@@ -450,10 +453,10 @@
                     <div
                         class="aspect-[4/3] bg-neutral-900 rounded-2xl overflow-hidden mb-4 relative shadow-lg border border-white/10">
                         <img src="pendo.png"
-                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-105"
+                            class="w-full h-full object-cover grayscale sm:grayscale group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-105"
                             alt="Pendo Management">
                         <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent sm:opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
                             <span
                                 class="border border-amber-500 text-amber-400 px-4 py-1.5 rounded-full uppercase text-[9px] tracking-widest bg-black/60 backdrop-blur-md">Visit
                                 Site &rarr;</span>
@@ -463,16 +466,16 @@
                         <div>
                             <h3 class="text-xl sm:text-2xl font-serif group-hover:text-amber-500 transition-colors">
                                 Pendo Management</h3>
-                            <p class="text-parchment/50 text-xs mt-1 mb-2">Modern educational ecosystem with intelligent
+                            <p class="text-parchment/60 text-xs mt-1 mb-2">Modern educational ecosystem with intelligent
                                 role-based tracking.</p>
-                            <div class="flex gap-2 text-[9px] uppercase tracking-widest font-semibold text-amber-500">
+                            <div class="flex flex-wrap gap-2 text-[9px] uppercase tracking-widest font-semibold text-amber-500">
                                 <span
-                                    class="border border-amber-500/20 bg-amber-500/10 px-2 py-0.5 rounded-full">Django</span>
+                                    class="border border-amber-500/20 bg-amber-500/10 px-2.5 py-0.5 rounded-full">Django</span>
                                 <span
-                                    class="border border-amber-500/20 bg-amber-500/10 px-2 py-0.5 rounded-full">PostgreSQL</span>
+                                    class="border border-amber-500/20 bg-amber-500/10 px-2.5 py-0.5 rounded-full">PostgreSQL</span>
                             </div>
                         </div>
-                        <span class="text-amber-500 font-serif italic text-xl">01</span>
+                        <span class="text-amber-500 font-serif italic text-xl shrink-0">01</span>
                     </div>
                 </a>
 
@@ -482,10 +485,10 @@
                     <div
                         class="aspect-[4/3] bg-neutral-900 rounded-2xl overflow-hidden mb-4 relative shadow-lg border border-white/10">
                         <img src="chrch.png"
-                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-105"
+                            class="w-full h-full object-cover grayscale sm:grayscale group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-105"
                             alt="SDA Church Hub">
                         <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent sm:opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
                             <span
                                 class="border border-amber-500 text-amber-400 px-4 py-1.5 rounded-full uppercase text-[9px] tracking-widest bg-black/60 backdrop-blur-md">Visit
                                 Site &rarr;</span>
@@ -495,16 +498,16 @@
                         <div>
                             <h3 class="text-xl sm:text-2xl font-serif group-hover:text-amber-500 transition-colors">
                                 Church Web App</h3>
-                            <p class="text-parchment/50 text-xs mt-1 mb-2">Community platform with integrated real-time
+                            <p class="text-parchment/60 text-xs mt-1 mb-2">Community platform with integrated real-time
                                 M-Pesa STK Push.</p>
-                            <div class="flex gap-2 text-[9px] uppercase tracking-widest font-semibold text-amber-500">
+                            <div class="flex flex-wrap gap-2 text-[9px] uppercase tracking-widest font-semibold text-amber-500">
                                 <span
-                                    class="border border-amber-500/20 bg-amber-500/10 px-2 py-0.5 rounded-full">FinTech</span>
+                                    class="border border-amber-500/20 bg-amber-500/10 px-2.5 py-0.5 rounded-full">FinTech</span>
                                 <span
-                                    class="border border-amber-500/20 bg-amber-500/10 px-2 py-0.5 rounded-full">Community</span>
+                                    class="border border-amber-500/20 bg-amber-500/10 px-2.5 py-0.5 rounded-full">Community</span>
                             </div>
                         </div>
-                        <span class="text-amber-500 font-serif italic text-xl">02</span>
+                        <span class="text-amber-500 font-serif italic text-xl shrink-0">02</span>
                     </div>
                 </a>
 
@@ -514,10 +517,10 @@
                     <div
                         class="aspect-[4/3] bg-neutral-900 rounded-2xl overflow-hidden mb-4 relative shadow-lg border border-white/10">
                         <img src="littlebox.png"
-                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-105"
+                            class="w-full h-full object-cover grayscale sm:grayscale group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-105"
                             alt="Little Box Foundation">
                         <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent sm:opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
                             <span
                                 class="border border-amber-500 text-amber-400 px-4 py-1.5 rounded-full uppercase text-[9px] tracking-widest bg-black/60 backdrop-blur-md">Visit
                                 Site &rarr;</span>
@@ -527,16 +530,16 @@
                         <div>
                             <h3 class="text-xl sm:text-2xl font-serif group-hover:text-amber-500 transition-colors">
                                 LittleBox Foundation</h3>
-                            <p class="text-parchment/50 text-xs mt-1 mb-2">Social impact and outreach engagement
+                            <p class="text-parchment/60 text-xs mt-1 mb-2">Social impact and outreach engagement
                                 platform.</p>
-                            <div class="flex gap-2 text-[9px] uppercase tracking-widest font-semibold text-amber-500">
+                            <div class="flex flex-wrap gap-2 text-[9px] uppercase tracking-widest font-semibold text-amber-500">
                                 <span
-                                    class="border border-amber-500/20 bg-amber-500/10 px-2 py-0.5 rounded-full">Non-Profit</span>
+                                    class="border border-amber-500/20 bg-amber-500/10 px-2.5 py-0.5 rounded-full">Non-Profit</span>
                                 <span
-                                    class="border border-amber-500/20 bg-amber-500/10 px-2 py-0.5 rounded-full">Frontend</span>
+                                    class="border border-amber-500/20 bg-amber-500/10 px-2.5 py-0.5 rounded-full">Frontend</span>
                             </div>
                         </div>
-                        <span class="text-amber-500 font-serif italic text-xl">03</span>
+                        <span class="text-amber-500 font-serif italic text-xl shrink-0">03</span>
                     </div>
                 </a>
 
@@ -546,10 +549,10 @@
                     <div
                         class="aspect-[4/3] bg-neutral-900 rounded-2xl overflow-hidden mb-4 relative shadow-lg border border-white/10">
                         <img src="landing page.png"
-                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-105"
+                            class="w-full h-full object-cover grayscale sm:grayscale group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-105"
                             alt="Urban Palate">
                         <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent sm:opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
                             <span
                                 class="border border-amber-500 text-amber-400 px-4 py-1.5 rounded-full uppercase text-[9px] tracking-widest bg-black/60 backdrop-blur-md">Visit
                                 Site &rarr;</span>
@@ -559,16 +562,16 @@
                         <div>
                             <h3 class="text-xl sm:text-2xl font-serif group-hover:text-amber-500 transition-colors">
                                 Urban Palate</h3>
-                            <p class="text-parchment/50 text-xs mt-1 mb-2">Premium UI/UX design and architecture for
+                            <p class="text-parchment/60 text-xs mt-1 mb-2">Premium UI/UX design and architecture for
                                 culinary industry.</p>
-                            <div class="flex gap-2 text-[9px] uppercase tracking-widest font-semibold text-amber-500">
-                                <span class="border border-amber-500/20 bg-amber-500/10 px-2 py-0.5 rounded-full">UX /
+                            <div class="flex flex-wrap gap-2 text-[9px] uppercase tracking-widest font-semibold text-amber-500">
+                                <span class="border border-amber-500/20 bg-amber-500/10 px-2.5 py-0.5 rounded-full">UX /
                                     UI</span>
                                 <span
-                                    class="border border-amber-500/20 bg-amber-500/10 px-2 py-0.5 rounded-full">Frontend</span>
+                                    class="border border-amber-500/20 bg-amber-500/10 px-2.5 py-0.5 rounded-full">Frontend</span>
                             </div>
                         </div>
-                        <span class="text-amber-500 font-serif italic text-xl">04</span>
+                        <span class="text-amber-500 font-serif italic text-xl shrink-0">04</span>
                     </div>
                 </a>
 
@@ -578,10 +581,10 @@
                     <div
                         class="aspect-[4/3] bg-neutral-900 rounded-2xl overflow-hidden mb-4 relative shadow-lg border border-white/10">
                         <img src="nails.png"
-                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-105"
+                            class="w-full h-full object-cover grayscale sm:grayscale group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-105"
                             alt="Nails by Kate">
                         <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent sm:opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
                             <span
                                 class="border border-amber-500 text-amber-400 px-4 py-1.5 rounded-full uppercase text-[9px] tracking-widest bg-black/60 backdrop-blur-md">Visit
                                 Site &rarr;</span>
@@ -591,16 +594,16 @@
                         <div>
                             <h3 class="text-xl sm:text-2xl font-serif group-hover:text-amber-500 transition-colors">
                                 Nails Website</h3>
-                            <p class="text-parchment/50 text-xs mt-1 mb-2">Elegant service portfolio and appointment
+                            <p class="text-parchment/60 text-xs mt-1 mb-2">Elegant service portfolio and appointment
                                 booking interface.</p>
-                            <div class="flex gap-2 text-[9px] uppercase tracking-widest font-semibold text-amber-500">
+                            <div class="flex flex-wrap gap-2 text-[9px] uppercase tracking-widest font-semibold text-amber-500">
                                 <span
-                                    class="border border-amber-500/20 bg-amber-500/10 px-2 py-0.5 rounded-full">Beauty</span>
+                                    class="border border-amber-500/20 bg-amber-500/10 px-2.5 py-0.5 rounded-full">Beauty</span>
                                 <span
-                                    class="border border-amber-500/20 bg-amber-500/10 px-2 py-0.5 rounded-full">Booking</span>
+                                    class="border border-amber-500/20 bg-amber-500/10 px-2.5 py-0.5 rounded-full">Booking</span>
                             </div>
                         </div>
-                        <span class="text-amber-500 font-serif italic text-xl">05</span>
+                        <span class="text-amber-500 font-serif italic text-xl shrink-0">05</span>
                     </div>
                 </a>
 
@@ -610,10 +613,10 @@
                     <div
                         class="aspect-[4/3] bg-neutral-900 rounded-2xl overflow-hidden mb-4 relative shadow-lg border border-white/10">
                         <img src="ironclad.png"
-                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-105"
+                            class="w-full h-full object-cover grayscale sm:grayscale group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-105"
                             alt="Ironclad Gear">
                         <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent sm:opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
                             <span
                                 class="border border-amber-500 text-amber-400 px-4 py-1.5 rounded-full uppercase text-[9px] tracking-widest bg-black/60 backdrop-blur-md">Visit
                                 Site &rarr;</span>
@@ -623,16 +626,16 @@
                         <div>
                             <h3 class="text-xl sm:text-2xl font-serif group-hover:text-amber-500 transition-colors">
                                 Ironclad Gear</h3>
-                            <p class="text-parchment/50 text-xs mt-1 mb-2">High-security e-commerce store specializing
+                            <p class="text-parchment/60 text-xs mt-1 mb-2">High-security e-commerce store specializing
                                 in tactical gear.</p>
-                            <div class="flex gap-2 text-[9px] uppercase tracking-widest font-semibold text-amber-500">
+                            <div class="flex flex-wrap gap-2 text-[9px] uppercase tracking-widest font-semibold text-amber-500">
                                 <span
-                                    class="border border-amber-500/20 bg-amber-500/10 px-2 py-0.5 rounded-full">E-Commerce</span>
+                                    class="border border-amber-500/20 bg-amber-500/10 px-2.5 py-0.5 rounded-full">E-Commerce</span>
                                 <span
-                                    class="border border-amber-500/20 bg-amber-500/10 px-2 py-0.5 rounded-full">Django</span>
+                                    class="border border-amber-500/20 bg-amber-500/10 px-2.5 py-0.5 rounded-full">Django</span>
                             </div>
                         </div>
-                        <span class="text-amber-500 font-serif italic text-xl">06</span>
+                        <span class="text-amber-500 font-serif italic text-xl shrink-0">06</span>
                     </div>
                 </a>
 
@@ -642,10 +645,10 @@
                     <div
                         class="aspect-[4/3] bg-neutral-900 rounded-2xl overflow-hidden mb-4 relative shadow-lg border border-white/10">
                         <img src="leadpac.png"
-                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-105"
+                            class="w-full h-full object-cover grayscale sm:grayscale group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-105"
                             alt="Leadpac Contractors">
                         <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent sm:opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
                             <span
                                 class="border border-amber-500 text-amber-400 px-4 py-1.5 rounded-full uppercase text-[9px] tracking-widest bg-black/60 backdrop-blur-md">Visit
                                 Site &rarr;</span>
@@ -655,16 +658,16 @@
                         <div>
                             <h3 class="text-xl sm:text-2xl font-serif group-hover:text-amber-500 transition-colors">
                                 Leadpac Contractors</h3>
-                            <p class="text-parchment/50 text-xs mt-1 mb-2">Corporate web platform engineered for
+                            <p class="text-parchment/60 text-xs mt-1 mb-2">Corporate web platform engineered for
                                 construction enterprise.</p>
-                            <div class="flex gap-2 text-[9px] uppercase tracking-widest font-semibold text-amber-500">
+                            <div class="flex flex-wrap gap-2 text-[9px] uppercase tracking-widest font-semibold text-amber-500">
                                 <span
-                                    class="border border-amber-500/20 bg-amber-500/10 px-2 py-0.5 rounded-full">Corporate</span>
+                                    class="border border-amber-500/20 bg-amber-500/10 px-2.5 py-0.5 rounded-full">Corporate</span>
                                 <span
-                                    class="border border-amber-500/20 bg-amber-500/10 px-2 py-0.5 rounded-full">Construction</span>
+                                    class="border border-amber-500/20 bg-amber-500/10 px-2.5 py-0.5 rounded-full">Construction</span>
                             </div>
                         </div>
-                        <span class="text-amber-500 font-serif italic text-xl">07</span>
+                        <span class="text-amber-500 font-serif italic text-xl shrink-0">07</span>
                     </div>
                 </a>
 
@@ -678,16 +681,16 @@
                     <div class="flex justify-between items-start">
                         <div>
                             <h3 class="text-xl sm:text-2xl font-serif">Smart Inventory 📦</h3>
-                            <p class="text-parchment/50 text-xs mt-1 mb-2">Predictive stock management with real-time
+                            <p class="text-parchment/60 text-xs mt-1 mb-2">Predictive stock management with real-time
                                 analytics.</p>
-                            <div class="flex gap-2 text-[9px] uppercase tracking-widest font-semibold text-amber-500">
+                            <div class="flex flex-wrap gap-2 text-[9px] uppercase tracking-widest font-semibold text-amber-500">
                                 <span
-                                    class="border border-amber-500/20 bg-amber-500/10 px-2 py-0.5 rounded-full">Enterprise</span>
+                                    class="border border-amber-500/20 bg-amber-500/10 px-2.5 py-0.5 rounded-full">Enterprise</span>
                                 <span
-                                    class="border border-amber-500/20 bg-amber-500/10 px-2 py-0.5 rounded-full">Analytics</span>
+                                    class="border border-amber-500/20 bg-amber-500/10 px-2.5 py-0.5 rounded-full">Analytics</span>
                             </div>
                         </div>
-                        <span class="text-amber-500 font-serif italic text-xl">08</span>
+                        <span class="text-amber-500 font-serif italic text-xl shrink-0">08</span>
                     </div>
                 </div>
 
@@ -699,12 +702,12 @@
     <footer id="contact" class="py-16 md:py-24 px-6 md:px-12 bg-black text-parchment border-t border-white/10">
         <div class="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-start gap-12 lg:gap-16">
             <div class="reveal-element flex-1 w-full">
-                <h2 class="text-4xl sm:text-6xl lg:text-7xl font-serif leading-[0.95] mb-8 tracking-tighter">
+                <h2 class="text-3xl sm:text-6xl lg:text-7xl font-serif leading-[0.95] mb-6 sm:mb-8 tracking-tighter">
                     Let's build secure<br><span class="italic text-amber-500">innovation.</span>
                 </h2>
-                <div class="group inline-block w-full sm:w-auto">
+                <div class="group inline-block w-full">
                     <a href="mailto:hello@orlantechinnovations@gmail.com"
-                        class="text-lg sm:text-2xl md:text-3xl font-light border-b border-white/20 pb-3 group-hover:text-amber-500 group-hover:border-amber-500 transition-all duration-300 block break-all">
+                        class="text-sm sm:text-xl md:text-3xl font-light border-b border-white/20 pb-2 sm:pb-3 group-hover:text-amber-500 group-hover:border-amber-500 transition-all duration-300 block break-all">
                         hello@orlantechinnovations@gmail.com
                     </a>
                 </div>
@@ -735,7 +738,7 @@
         </div>
 
         <div
-            class="max-w-7xl mx-auto mt-20 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between text-[9px] font-bold uppercase tracking-[0.3em] text-white/40 gap-4">
+            class="max-w-7xl mx-auto mt-16 sm:mt-20 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between text-[9px] font-bold uppercase tracking-[0.3em] text-white/40 gap-4 text-center md:text-left">
             <p>© 2026 ORLANTECH INNOVATIONS</p>
             <p>NAIROBI, KENYA</p>
             <p>WHERE TECH MEETS CREATIVITY</p>
@@ -770,30 +773,43 @@
 
         document.querySelectorAll('.reveal-element').forEach(el => observer.observe(el));
 
-        // Spotlight Reveal Mechanic Script (Pure Native JS Implementation)
+        // Spotlight Reveal Mechanic Script (Pure Native JS Implementation with Mobile Fallback)
         const spotlightSection = document.getElementById('spotlight-interactive');
         const revealLayer = document.getElementById('revealLayer');
         const canvas = document.getElementById('spotlightCanvas');
-        const ctx = canvas.getContext('2d');
+        const ctx = canvas ? canvas.getContext('2d') : null;
 
         const SPOTLIGHT_R = 260;
         let mouse = { x: -999, y: -999 };
         let smooth = { x: -999, y: -999 };
 
         function updateCanvasSize() {
+            if (!canvas) return;
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
         }
         window.addEventListener('resize', updateCanvasSize);
         updateCanvasSize();
 
-        spotlightSection.addEventListener('mousemove', (e) => {
-            const rect = spotlightSection.getBoundingClientRect();
-            mouse.x = e.clientX - rect.left;
-            mouse.y = e.clientY - rect.top;
-        });
+        if (spotlightSection) {
+            spotlightSection.addEventListener('mousemove', (e) => {
+                const rect = spotlightSection.getBoundingClientRect();
+                mouse.x = e.clientX - rect.left;
+                mouse.y = e.clientY - rect.top;
+            });
+
+            // Touch support for mobile spotlight interaction simulation
+            spotlightSection.addEventListener('touchmove', (e) => {
+                if (e.touches.length > 0) {
+                    const rect = spotlightSection.getBoundingClientRect();
+                    mouse.x = e.touches[0].clientX - rect.left;
+                    mouse.y = e.touches[0].clientY - rect.top;
+                }
+            }, { passive: true });
+        }
 
         function renderSpotlight() {
+            if (!ctx || !canvas) return;
             // Lerp mouse positions for smooth trailing mask
             smooth.x += (mouse.x - smooth.x) * 0.1;
             smooth.y += (mouse.y - smooth.y) * 0.1;
